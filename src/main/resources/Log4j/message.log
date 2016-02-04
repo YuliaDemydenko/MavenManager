@@ -1,0 +1,106 @@
+20:37:16,121  INFO main MainView:<init>:39 - Buttons created
+20:37:16,124  INFO main MainView:onFrameCreate:75 - Main is created
+20:37:16,128  INFO main MainView:onButtonAdd:110 - Add button has been added into the Main Frame
+20:37:16,131  INFO main MainView:onButtonAdd:114 - Drop button has been added into the Main Frame
+20:37:16,131  INFO main MainView:onButtonAdd:118 - Update Button has been added into the Main Frame
+20:37:16,131  INFO main MainView:onButtonAdd:122 - Filter button has been added into the Main Frame
+20:37:16,314  INFO main MainView:<init>:62 - Buttons added on frame
+20:37:16,338  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,338  INFO main Task:setTitle:48 - Title for task has been created
+20:37:16,352  INFO main ArrayTaskList:add:29 - Task has been added into the frame
+20:37:16,352  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,352  INFO main Task:setTitle:48 - Title for task has been created
+20:37:16,353  INFO main ArrayTaskList:add:29 - Task has been added into the frame
+20:37:16,353  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,353  INFO main Task:setTitle:48 - Title for task has been created
+20:37:16,353  INFO main ArrayTaskList:add:29 - Task has been added into the frame
+20:37:16,356  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,356  INFO main Task:setTitle:48 - Title for task has been created
+20:37:16,357  INFO main ArrayTaskList:add:29 - Task has been added into the frame
+20:37:16,357  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,357  INFO main Task:setTitle:48 - Title for task has been created
+20:37:16,357  INFO main Task:setTime:64 - Time for task has been set
+20:37:16,357  INFO main ArrayTaskList:add:29 - Task has been added into the frame
+20:37:16,473  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,474  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,475  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,475  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:16,475  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,475  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:16,476  INFO Thread-2 Task:getStartTime:96 - Get new time
+20:37:16,476  INFO Thread-2 Task:getEndTime:105 - Get new time
+20:37:16,503  INFO main TaskController:showTasks:34 - Task shows on the screen
+20:37:16,581  INFO main MainView:setTasks:97 - tasks has been added into the Main Frame
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,476  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:17,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:17,477  INFO Thread-2 Task:getStartTime:96 - Get new time
+20:37:17,477  INFO Thread-2 Task:getEndTime:105 - Get new time
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:18,477  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,478  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:18,478  INFO Thread-2 Task:getStartTime:96 - Get new time
+20:37:18,478  INFO Thread-2 Task:getEndTime:105 - Get new time
+20:37:19,478  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,478  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:19,479  INFO Thread-2 Task:getStartTime:96 - Get new time
+20:37:19,479  INFO Thread-2 Task:getEndTime:105 - Get new time
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getStartTime:92 - Get the same time 
+20:37:20,480  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,481  INFO Thread-2 Task:getEndTime:102 - Get the same time 
+20:37:20,481  INFO Thread-2 Task:getStartTime:96 - Get new time
+20:37:20,481  INFO Thread-2 Task:getEndTime:105 - Get new time
+20:37:21,318  INFO AWT-EventQueue-0 MainView:windowClosing:44 - Window has been closed
