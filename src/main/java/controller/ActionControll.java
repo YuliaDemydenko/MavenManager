@@ -3,7 +3,6 @@ package controller;
 import java.util.HashMap;
 import java.util.Map;
 import controller.actions.*;
-import org.apache.log4j.Logger;
 import view.ActionList;
 
 public class ActionControll implements ActionList {

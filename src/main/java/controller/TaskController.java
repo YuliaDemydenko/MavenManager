@@ -2,12 +2,16 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Observable;
 import java.util.Observer;
+import model.ArrayTaskList;
 import model.ManagerModel;
 import model.Task;
-import org.apache.log4j.*;
+import model.TaskList;
+import org.slf4j.*;
 import view.*;
 import view.ActionList;
 import static controller.ActionControll.getActionControll;
@@ -18,15 +22,46 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	private ManagerModel model;
 	private static ActionControll initialization = getActionControll();
 	private static final TaskController controller= new TaskController();
-	private static final Logger Log = Logger.getLogger(TaskController.class);
+	private static final Logger Log = LoggerFactory.getLogger(TaskController.class);
 
 	private TaskController()  {
 		this.view = new MainView();
 		view.addListener(this);
-		this.model = new ManagerModel();
+		this.model = new ManagerModel() {
+			@Override
+			public void notify(Object obj) {
+			}
+			@Override
+			public void addTask(Task task) throws IOException {
+			}
+			@Override
+			public ArrayTaskList getTaskList() {
+				return null;
+			}
+			@Override
+			public void textReader(TaskList tasks, File fileName) throws IOException, ParseException {
+			}
+			@Override
+			public void textWriter(TaskList tasks, File fileName) throws IOException {
+			}
+			@Override
+			public void removeTask(Task task) throws IOException {
+			}
+			@Override
+			public Task getTask(String title) {
+				return null;
+			}
+			@Override
+			public void readTaskList(ArrayTaskList tasks) {
+			}
+			@Override
+			public void addObserver(TaskController taskController) {
+			}
+		};
 		model.addObserver(this);
 		initialization.init();
 		}
+
 	public static void main(String[] args) {
 		getController().showTasks();
 	}
@@ -40,13 +75,13 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	}
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		Log.debug("An action has been occured");
 		Object source = event.getSource();
 		initialization.getAction(event.getActionCommand()).execute(this, source, model, view);
+		Log.debug("Choosing action", event.getActionCommand());
 	}
 	public Task getTaskToEdit() {
-		Log.debug("Return task to set it to edit window");
 		Task task = model.getTask(view.getSelectedTask());
+		Log.debug("Return task to set it to edit window", task);
 		return task;
 	}
 	/**
@@ -55,11 +90,11 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		if (arg1==UPDATE) {
-			Log.debug("Updating frame");
+			Log.debug("Updating frame", arg1);
 			showTasks();
 		}
 		if( arg1==REMOVE){
-			Log.debug("Task removing from frame");
+			Log.debug("Task removing from frame", arg1);
 			showTasks();
 		}
 		if (arg1 instanceof Task) {
