@@ -5,14 +5,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import model.ArrayTaskList;
 import model.Task;
 import javax.swing.*;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
-public class MainView implements ActionList{
+public class MainView implements ActionList, List{
 
 	private JFrame frame;
 	private JPanel panel;
@@ -24,7 +25,7 @@ public class MainView implements ActionList{
 	private JButton JResetButton;
 	private ActionListener listener;
 	private CheckboxGroup delivery = new CheckboxGroup();
-	private static final Logger Log = Logger.getLogger(MainView.class);
+	private static final Logger Log = LoggerFactory.getLogger(MainView.class);
 	public static Map<String, Checkbox> buttonMap = new HashMap<>();
 
 	public MainView() {
@@ -40,8 +41,8 @@ public class MainView implements ActionList{
 		onFrameCreate();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.addWindowListener(new WindowListener() {
-           public void windowClosing(WindowEvent event) {
-			   Log.info("Window has been closed");}
+			public void windowClosing(WindowEvent event) {
+				Log.info("Window has been closed");}
 			@Override
 			public void windowActivated(WindowEvent arg0) {	}
 			@Override
@@ -55,26 +56,25 @@ public class MainView implements ActionList{
 			@Override
 			public void windowOpened(WindowEvent arg0) { }
 
-        });
+		});
 		onButtonAdd();
 		frame.getContentPane();
 		frame.setVisible(true);
 		Log.info("Buttons added on frame");
 	}
-
+	@Override
 	public void addListener (ActionListener listen) {
 		listener = listen;
 	}
-
+	@Override
 	public void onFrameCreate () {
 		Log.debug("Creating Main Frame");
 		frame.setSize(420, 330);
 		frame.setLocation(400, 100);
-		//frame.setResizable(false);
 		frame.setLayout(new BorderLayout());
 		Log.info("Main is created");
 	}
-
+	@Override
 	public void setTasks(ArrayTaskList tasks) {
 		Log.debug("Adding task into the Main Frame");
 		panel.setBorder(BorderFactory.createTitledBorder("Tasks"));
@@ -96,13 +96,13 @@ public class MainView implements ActionList{
 		frame.getContentPane().add(panel);
 		Log.info("tasks has been added into the Main Frame");
 	}
-
+	@Override
 	public void addButton(JButton button) {
 		Log.debug("Adding buttons into the Main Frame");
 		frame.add(button);
 	}
-
-	private  void onButtonAdd() {
+	@Override
+	public void onButtonAdd() {
 		Log.debug("Adding buttons aon the frame and listeners to them");
 		JAddButton.setSize(120, 40);
 		JAddButton.setLocation(250, 30);
@@ -128,7 +128,7 @@ public class MainView implements ActionList{
 			public void actionPerformed(ActionEvent event) {
 				Log.debug("Creating listener for Add button");
 				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_ADD);
-	            listener.actionPerformed(ev);
+				listener.actionPerformed(ev);
 				Log.info("Listener for Add button has been created");
 			}
 		});
@@ -136,7 +136,7 @@ public class MainView implements ActionList{
 			public void actionPerformed(ActionEvent event) {
 				Log.debug("Creating listener for Drop button");
 				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_DROP);
-	            listener.actionPerformed(ev);
+				listener.actionPerformed(ev);
 				Log.info("Listener for Drop button has been created");
 			}
 		});
@@ -144,19 +144,19 @@ public class MainView implements ActionList{
 			public void actionPerformed(ActionEvent event) {
 				Log.debug("Creating listener for Update button");
 				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_EDIT);
-	            listener.actionPerformed(ev);
+				listener.actionPerformed(ev);
 				Log.info("Listener for Update button has been created");
 			}
 		});
-			JFilterButton.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent event) {
-					Log.debug("Creating listener for FILTER button");
-					ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_FILTER);
-					listener.actionPerformed(ev);
-					Log.info("Listener for FILTER button has been created");
-				}
-			});
-		    JResetButton.addActionListener(new ActionListener() {
+		JFilterButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				Log.debug("Creating listener for FILTER button");
+				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_FILTER);
+				listener.actionPerformed(ev);
+				Log.info("Listener for FILTER button has been created");
+			}
+		});
+		JResetButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				Log.debug("Creating listener for FILTER button");
 				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_CLEAN);
@@ -171,18 +171,71 @@ public class MainView implements ActionList{
 		frame.add(JResetButton);
 		frame.add(panel);
 	}
-
+	@Override
 	public String getSelectedTask() {
 		Log.debug("Select task from list");
 		Checkbox box = delivery.getSelectedCheckbox();
 		if (box !=null) {
-			return box.getLabel();	
+			return box.getLabel();
 		} else {
 			return null;
 		}
 	}
+	@Override
 	public void errorMessage(Object obj) {
 		Log.error("Task wasn`t selected");
 		JOptionPane.showMessageDialog(null, obj, "Information", JOptionPane.PLAIN_MESSAGE);
 	}
+	@Override
+	public void close() {}
+
+	@Override
+	public void onLabelAdd() {}
+
+	@Override
+	public void onEditAdd() {}
+
+	@Override
+	public void timeItems() {}
+
+	@Override
+	public String getTitleField() {	return null;}
+
+	@Override
+	public boolean getActivefield() {return false;}
+
+	@Override
+	public Date getStartTimeField() {	return null;}
+
+	@Override
+	public Date getEndTimeField() {	return null;	}
+
+	@Override
+	public long getRepeatIntervalField() {	return 0;	}
+
+	@Override
+	public void setTitleToEdit(String title) {	}
+
+	@Override
+	public void setActiveToEdit(boolean act) {	}
+
+	@Override
+	public void setStartTimeToEdit(int day, int month, int year, int hours, int minute) {}
+
+	@Override
+	public void setEndTimeToEdit(int day, int month, int year, int hours, int minute) {}
+
+	@Override
+	public void setRepeatInterval(long repeat) {}
+
+	@Override
+	public Task getTask() {	return null;}
+
+	@Override
+	public void setTaskToEdit(Task task) {	}
+
+	@Override
+	public String getTaskToRemove() {	return null;}
+
+
 }

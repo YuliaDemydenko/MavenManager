@@ -1,6 +1,8 @@
 package view;
 
-import org.apache.log4j.Logger;
+import model.ArrayTaskList;
+import model.Task;
+import org.slf4j.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ShowView  implements ActionList{
+public class ShowView  implements ActionList, List{
 
     private JFrame frame;
     private JLabel JStartLabel;
@@ -23,28 +25,31 @@ public class ShowView  implements ActionList{
     private static Choice EndMonth;
     private static Choice EndYear;
     private ActionListener listener;
-    private static final Logger Log = Logger.getLogger(AddView.class);
+    private static final Logger Log = LoggerFactory.getLogger(AddView.class);
 
     public ShowView (String title) {
         Log.debug("Creating new window");
         frame = new JFrame(title);
         panel = new JPanel();
-        onAddFrameCreate();
+        onFrameCreate();
         onEditAdd();
         panel.setBackground(Color.WHITE);
         panel.setLayout(null);
         onLabelAdd();
-        onButtonsAdd();
+        onButtonAdd();
         frame.getContentPane().add(panel);
         frame.setVisible(true);
-        addItem();
+        timeItems();
         Log.info("New window was created");
     }
+    @Override
     public void addListener (ActionListener listen) {
         Log.debug("Adding listener");
         listener = listen;
     }
-    public void onAddFrameCreate () {
+
+    @Override
+    public void onFrameCreate() {
         Log.debug("Creating new frame for filter");
         frame.setSize(420, 300);
         frame.setLocation(400, 100);
@@ -54,7 +59,9 @@ public class ShowView  implements ActionList{
         JEndLabel = new JLabel("End time");
 
         Log.info("New frame has been created");}
-    public void onButtonsAdd () {
+
+    @Override
+    public void onButtonAdd () {
         Log.debug("Creating buttons for filter frame and adding listeners");
         applyButton = new JButton("Apply");
         applyButton.setSize(80, 30);
@@ -83,6 +90,7 @@ public class ShowView  implements ActionList{
         frame.add(cancelButton);
         Log.debug("Buttons has been created");
     }
+   @Override
     public void onLabelAdd() {
         Log.debug("Adding label on filter panel");
         JStartLabel.setBounds(10, 70, 100, 20);
@@ -90,7 +98,7 @@ public class ShowView  implements ActionList{
         panel.add(JStartLabel);
         panel.add(JEndLabel);
     }
-
+   @Override
     public void onEditAdd() {
         Log.debug("Adding time panels on a frame");
         StartYear = new Choice();
@@ -113,7 +121,8 @@ public class ShowView  implements ActionList{
         panel.add(EndDate);
 
     }
-    public void addItem () {
+    @Override
+    public void timeItems () {
         Log.debug("Adding items for dates");
         for (int i = 1; i <= 31; i++) {
             if (i < 10) {
@@ -138,12 +147,13 @@ public class ShowView  implements ActionList{
             EndYear.addItem("" + i);
         }
     }
+    @Override
     public void close() {
         frame.setVisible(false);
         Log.info("Window closed");
     }
-
-    public static Date getStartTimeField() {
+    @Override
+    public Date getStartTimeField() {
         Log.debug("Return start time of filter");
         int startDate = Integer.parseInt(StartDate.getSelectedItem());
         int startMonth = Integer.parseInt(StartMonth.getSelectedItem());
@@ -153,8 +163,8 @@ public class ShowView  implements ActionList{
         Date start = startTime.getTime();
         return start;
     }
-
-    public static Date getEndTimeField() {
+    @Override
+    public Date getEndTimeField() {
         Log.debug("Return end time of filter");
         int endDate = Integer.parseInt(EndDate.getSelectedItem());
         int endMonth = Integer.parseInt(EndMonth.getSelectedItem());
@@ -164,4 +174,36 @@ public class ShowView  implements ActionList{
         Date end = endTime.getTime();
         return end;
     }
+    @Override
+    public long getRepeatIntervalField() { return 0; }
+    @Override
+    public void setTitleToEdit(String title) { }
+    @Override
+    public void setActiveToEdit(boolean act) { }
+    @Override
+    public void setStartTimeToEdit(int day, int month, int year, int hours, int minute) { }
+    @Override
+    public void setEndTimeToEdit(int day, int month, int year, int hours, int minute) { }
+    @Override
+    public void setRepeatInterval(long repeat) {}
+    @Override
+    public Task getTask() { return null;   }
+    @Override
+    public void setTaskToEdit(Task task) {
+    }
+    @Override
+    public String getTaskToRemove() { return null;  }
+    @Override
+    public String getSelectedTask() { return null;  }
+    @Override
+    public void errorMessage(Object obj) {}
+    @Override
+    public String getTitleField() {return null; }
+    @Override
+    public boolean getActivefield() { return false; }
+    @Override
+    public void setTasks(ArrayTaskList tasks) {}
+    @Override
+    public void addButton(JButton button) {}
+
 }

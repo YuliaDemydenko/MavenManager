@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * This interface contain action commands to controller.
@@ -21,4 +22,6 @@ public interface ActionList {
 	String ACTION_APPLY = "Apply";
 	String ACTION_CLEAN = "Clean filter";
 	String ACTION_CLOSEFILTER = "Close filter";
+
+
 }
