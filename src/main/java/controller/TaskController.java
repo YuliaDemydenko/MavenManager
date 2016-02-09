@@ -2,15 +2,11 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.text.ParseException;
 import java.util.Observable;
 import java.util.Observer;
-import model.ArrayTaskList;
+
 import model.ManagerModel;
 import model.Task;
-import model.TaskList;
 import org.slf4j.*;
 import view.*;
 import view.ActionList;
@@ -18,7 +14,7 @@ import static controller.ActionControll.getActionControll;
 
 public class TaskController  implements ActionList, ActionListener, Observer {
 
-	private  MainView view;
+	private MainView view;
 	private ManagerModel model;
 	private static ActionControll initialization = getActionControll();
 	private static final TaskController controller= new TaskController();
@@ -27,37 +23,7 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	private TaskController()  {
 		this.view = new MainView();
 		view.addListener(this);
-		this.model = new ManagerModel() {
-			@Override
-			public void notify(Object obj) {
-			}
-			@Override
-			public void addTask(Task task) throws IOException {
-			}
-			@Override
-			public ArrayTaskList getTaskList() {
-				return null;
-			}
-			@Override
-			public void textReader(TaskList tasks, File fileName) throws IOException, ParseException {
-			}
-			@Override
-			public void textWriter(TaskList tasks, File fileName) throws IOException {
-			}
-			@Override
-			public void removeTask(Task task) throws IOException {
-			}
-			@Override
-			public Task getTask(String title) {
-				return null;
-			}
-			@Override
-			public void readTaskList(ArrayTaskList tasks) {
-			}
-			@Override
-			public void addObserver(TaskController taskController) {
-			}
-		};
+		this.model = new ManagerModel();
 		model.addObserver(this);
 		initialization.init();
 		}
@@ -99,8 +65,8 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 		}
 		if (arg1 instanceof Task) {
 			Log.debug("Adding new task into the frame");
-			MessageView messageView =  new MessageView();
-			messageView.addMessageLabel((Task) arg1);
+			List messageView =  new MessageView();
+			messageView.setTaskToEdit((Task) arg1);
 			messageView.addListener(this);
 		}
 	}

@@ -1,6 +1,7 @@
 package controller.actions;
 
 import model.ManagerModel;
+import model.RemoveTaskExeption;
 import model.Task;
 import org.slf4j.*;
 import view.MainView;
@@ -25,10 +26,9 @@ public class ActionDrop implements Action {
 						view.errorMessage("Check task to remove");
 						Log.error("Wasn`t choose task for remove");
 					}
-				} catch (IOException e) {
-					view.errorMessage(e);
-					Log.error("IOException", e);
+				} catch (RemoveTaskExeption removeTaskExeption) {
+					removeTaskExeption.printStackTrace();
 				}
-		}
+	}
 	}
 

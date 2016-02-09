@@ -188,54 +188,32 @@ public class MainView implements ActionList, List{
 	}
 	@Override
 	public void close() {}
-
 	@Override
 	public void onLabelAdd() {}
-
 	@Override
 	public void onEditAdd() {}
-
 	@Override
 	public void timeItems() {}
-
 	@Override
 	public String getTitleField() {	return null;}
-
 	@Override
 	public boolean getActivefield() {return false;}
-
-	@Override
-	public Date getStartTimeField() {	return null;}
-
-	@Override
-	public Date getEndTimeField() {	return null;	}
-
 	@Override
 	public long getRepeatIntervalField() {	return 0;	}
-
 	@Override
-	public void setTitleToEdit(String title) {	}
-
+	public void setTitleToEdit(String title) {}
 	@Override
-	public void setActiveToEdit(boolean act) {	}
-
+	public void setActiveToEdit(boolean act) {}
 	@Override
 	public void setStartTimeToEdit(int day, int month, int year, int hours, int minute) {}
-
 	@Override
 	public void setEndTimeToEdit(int day, int month, int year, int hours, int minute) {}
-
 	@Override
 	public void setRepeatInterval(long repeat) {}
-
 	@Override
 	public Task getTask() {	return null;}
-
 	@Override
-	public void setTaskToEdit(Task task) {	}
-
+	public void setTaskToEdit(Task task) {}
 	@Override
-	public String getTaskToRemove() {	return null;}
-
-
+	public String getTaskToRemove() {return null;}
 }

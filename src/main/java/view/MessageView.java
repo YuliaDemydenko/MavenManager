@@ -113,10 +113,6 @@ public class MessageView implements ActionList, List {
 	@Override
 	public boolean getActivefield() {return false;}
 	@Override
-	public Date getStartTimeField() {return null;}
-	@Override
-	public Date getEndTimeField() {	return null;}
-	@Override
 	public long getRepeatIntervalField() {return 0;}
 	@Override
 	public void setTitleToEdit(String title) {}

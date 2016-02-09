@@ -35,11 +35,11 @@ public class AddView  implements ActionList, List{
 	private Choice StartYear;
 	private Choice StartMinute;
 	private Choice StartHour;
-	private Choice EndDate;
-	private Choice EndMonth;
-	private Choice EndYear;
-	private Choice EndMinute;
-	private Choice EndHour;
+	private static Choice EndDate;
+	private static Choice EndMonth;
+	private static Choice EndYear;
+	private static Choice EndMinute;
+	private static Choice EndHour;
 	private Choice Interval;
 	private ActionListener listener;
 	private static final Logger Log = LoggerFactory.getLogger(AddView.class);
@@ -238,7 +238,6 @@ public class AddView  implements ActionList, List{
 			return false;
 		}
 	}
-	@Override
 	public Date getStartTimeField() {
 		Log.debug("Return start time of task");
 		int startDate = Integer.parseInt(StartDate.getSelectedItem());
@@ -250,8 +249,7 @@ public class AddView  implements ActionList, List{
 		startTime.set(startYear, startMonth - 1, startDate, startHour, startMinute, 0);
 		return startTime.getTime();
 	}
-	@Override
-	public Date getEndTimeField() {
+	public static Date getEndTimeField() {
 		Log.debug("Return end time of task");
 		int endDate = Integer.parseInt(EndDate.getSelectedItem());
 		int endMonth = Integer.parseInt(EndMonth.getSelectedItem());

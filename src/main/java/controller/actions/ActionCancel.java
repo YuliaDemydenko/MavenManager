@@ -1,6 +1,7 @@
 package controller.actions;
 
 import model.ManagerModel;
+import model.RemoveTaskExeption;
 import model.Task;
 import org.slf4j.*;
 import view.MainView;
@@ -23,11 +24,9 @@ public class ActionCancel implements Action {
 						model.removeTask(task);
 					}
 				}
+			} catch (RemoveTaskExeption removeTaskExeption) {
+				removeTaskExeption.printStackTrace();
 			}
-			catch (IOException e) {
-				view.errorMessage(e);
-				Log.error("IOException error", e);
-			}
-		}
+	}
 	}
 

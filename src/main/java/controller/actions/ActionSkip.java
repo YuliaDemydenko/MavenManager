@@ -2,6 +2,7 @@ package controller.actions;
 
 import model.ManagerModel;
 import org.slf4j.*;
+import view.List;
 import view.MainView;
 import view.MessageView;
 import java.awt.event.ActionListener;

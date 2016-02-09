@@ -152,8 +152,8 @@ public class ShowView  implements ActionList, List{
         frame.setVisible(false);
         Log.info("Window closed");
     }
-    @Override
-    public Date getStartTimeField() {
+
+    public static Date getStartTimeField() {
         Log.debug("Return start time of filter");
         int startDate = Integer.parseInt(StartDate.getSelectedItem());
         int startMonth = Integer.parseInt(StartMonth.getSelectedItem());
@@ -163,8 +163,7 @@ public class ShowView  implements ActionList, List{
         Date start = startTime.getTime();
         return start;
     }
-    @Override
-    public Date getEndTimeField() {
+    public static Date getEndTimeField() {
         Log.debug("Return end time of filter");
         int endDate = Integer.parseInt(EndDate.getSelectedItem());
         int endMonth = Integer.parseInt(EndMonth.getSelectedItem());

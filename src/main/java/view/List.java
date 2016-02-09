@@ -22,8 +22,6 @@ public interface List {
     public void timeItems ();
     public String getTitleField ();
     public boolean getActivefield();
-    public Date getStartTimeField();
-    public Date getEndTimeField();
     public long getRepeatIntervalField();
     public void setTitleToEdit(String title);
     public void setActiveToEdit(boolean act);
