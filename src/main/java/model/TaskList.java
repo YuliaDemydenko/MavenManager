@@ -4,14 +4,24 @@ import java.util.*;
 import java.io.*;
 import org.apache.log4j.*;
 
-public abstract class TaskList implements Cloneable, Iterable<Task>, Serializable {
+public abstract class TaskList implements TaskInterface, Cloneable, Iterable<Task>, Serializable {
 
-    public abstract void add(Task tasks) throws AddTaskException;
+    @Override
+    public abstract void addTask(Task task) throws AddTaskException;
+
+    @Override
+    public abstract void removeTask(Task task) throws RemoveTaskExeption;
+
+    @Override
+    public Task getTask(String title) {
+        return null;
+    }
+
     private static final Logger Log = Logger.getLogger(TaskList.class);
-    public abstract void remove(Task tasks) throws RemoveTaskExeption;
     public abstract Task getTask(int number);
     public abstract int size();
 
+    @Override
     public boolean equals(Object list) {
         if (list == this)
             return true;
@@ -27,12 +37,14 @@ public abstract class TaskList implements Cloneable, Iterable<Task>, Serializabl
         }
         return !(it.hasNext() || e2.hasNext());
     }
+    @Override
     public int hashCode() {
         int hashCode = 1;
         for (Task e : this)
             hashCode = 12*hashCode + (e==null ? 0 : e.hashCode());
         return hashCode;
     }
+    @Override
  	public TaskList clone() throws CloneNotSupportedException  {
 		TaskList cloned;
 		try {
@@ -42,11 +54,9 @@ public abstract class TaskList implements Cloneable, Iterable<Task>, Serializabl
             Log.error("CloneNotSupportedException");
 			throw new RuntimeException("CloneNotSupportedException");
 	}
-		return cloned;
+		return (ArrayTaskList) cloned;
 	}
-    public Iterator<Task> iterator() {
-        return new TaskListIterator();
-    }
+
 
     private class TaskListIterator implements Iterator<Task> {
 

@@ -1,10 +1,11 @@
 package model;
 
+import java.text.ParseException;
 import java.util.*;
 import java.io.*;
 import org.apache.log4j.*;
 
-public class Task implements Cloneable, Serializable {
+public class Task implements TaskInterface, Cloneable, Serializable {
     private String title;
     private Date time;
     private Date start;
@@ -35,9 +36,11 @@ public class Task implements Cloneable, Serializable {
             Log.info("New task created");
         }
     }
+    @Override
     public String getTitle() {
         return title;
     }
+    @Override
     public void setTitle(String title) {
         Log.debug ("Set title for task");
 		if (title ==  null) {
@@ -48,12 +51,15 @@ public class Task implements Cloneable, Serializable {
             Log.info("Title for task has been created");
 		}
 	}
+    @Override
     public boolean isActive() {
         return active;
     }
+    @Override
     public void setActive(boolean active){
 		this.active = active;
     }
+    @Override
     public void setTime(Date time){
         if (time.getTime() < 0) {
             Log.error("IllegalArgumentException");
@@ -64,6 +70,7 @@ public class Task implements Cloneable, Serializable {
             Log.info("Time for task has been set");
         }
     }
+    @Override
     public void setTime(Date start, Date end, long interval){
         Log.debug ("Set start, end time and interval for task");
         if (start.getTime() < 0 || interval < 0) {
@@ -73,9 +80,10 @@ public class Task implements Cloneable, Serializable {
             this.start = start;
             this.end = end;
             this.interval = interval;
-            Log.debug ("Start, end time and interval for task has been set");
+            Log.debug("Start, end time and interval for task has been set");
         }
     }
+    @Override
     public Date getTime() {
         Log.debug("Get time for task");
         if (isRepeated()) {
@@ -86,6 +94,7 @@ public class Task implements Cloneable, Serializable {
             return this.time;
         }
     }
+    @Override
     public Date getStartTime() {
         Log.debug("Get start time for task");
         if (isRepeated()) {
@@ -96,6 +105,7 @@ public class Task implements Cloneable, Serializable {
             Log.info("Get new time");
             return time; }
     }
+    @Override
     public Date getEndTime(){
         Log.debug("Get end time for task");
 		if (isRepeated()) {
@@ -106,6 +116,7 @@ public class Task implements Cloneable, Serializable {
 			return this.time;
 		}
     }
+    @Override
     public long getRepeatInterval(){
         Log.debug("Get interval for task");
         if (isRepeated()) {
@@ -116,10 +127,12 @@ public class Task implements Cloneable, Serializable {
             return 0;
         }
     }
+    @Override
     public boolean isRepeated() {
         if (interval > 0) return true;
         else return false;
     }
+    @Override
     public String toString() {
         if (isRepeated()) {
             return ("Task: " + title + " from " + start + " to " + end + " and every " + interval);
@@ -127,6 +140,28 @@ public class Task implements Cloneable, Serializable {
             return ("Task: " + title + " at " + start);
         }
     }
+
+    @Override
+    public Iterator<Task> iterator() {
+        return null;
+    }
+
+    @Override
+    public void notify(Object obj) {
+
+    }
+
+    @Override
+    public ArrayTaskList getTaskList() {
+        return null;
+    }
+
+    @Override
+    public void readTaskList(ArrayTaskList tasks) {
+
+    }
+
+    @Override
     public Date nextTimeAfter(Date current) {
         if (isActive()) {
             if ((!isRepeated()) && (current.compareTo(time)<=0)) {
@@ -147,6 +182,20 @@ public class Task implements Cloneable, Serializable {
         }
         else return null;
     }
+
+    @Override
+    public void addTask(Task task) throws AddTaskException {}
+    @Override
+    public void removeTask(Task task) throws RemoveTaskExeption {}
+    @Override
+    public Task getTask(String title) {  return null;  }
+    @Override
+    public void remove(Task task) throws RemoveTaskExeption {}
+    @Override
+    public Task getTask(int number) { return null;  }
+    @Override
+    public int size() {    return 0;  }
+
     public Task clone() throws CloneNotSupportedException {
             Task cloned = (Task) super.clone();
             return cloned;
@@ -164,6 +213,7 @@ public class Task implements Cloneable, Serializable {
                 active == task.active &&
                 Objects.equals(title, task.title);
     }
+    @Override
     public int hashCode() {
         int hash = 1;
         hash *= 10 + getTitle().hashCode();
@@ -178,3 +228,4 @@ public class Task implements Cloneable, Serializable {
         return hash;
     }
 }
+
