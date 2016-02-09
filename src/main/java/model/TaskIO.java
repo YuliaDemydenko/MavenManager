@@ -151,7 +151,7 @@ public class TaskIO  {
             Log.error("IOException");
     	}
     }
-    	public static void textReader(TaskList tasks, File fileName) throws IOException, ParseException {
+    	public static void textReader(TaskList tasks, File fileName) throws FileNotFoundException, AddTaskException {
 	    	try(BufferedReader FileReader = new BufferedReader(new FileReader(fileName))){
 		    	String st;
 		    	while ((st = FileReader.readLine()) != null) {
@@ -197,24 +197,18 @@ public class TaskIO  {
 							    			else
 							    				if(arr[i+1].equals("days")) time+=Long.valueOf(arr[i])*24*60*60*1000;
 						    	}
-						    	task.setTime( (dateFormat.parse(date)),dateFormat.parse(dateTo),time);
-			    	}
+                                task.setTime( (dateFormat.parse(date)),dateFormat.parse(dateTo),time);
+
+                            }
 			    	tasks.addTask(task);
 		    	}
-	    	} catch (FileNotFoundException e) {
-                Log.error("FileNotFoundException");
-		    	e.printStackTrace();
-	    	} catch (IOException e) {
-                Log.error("IOException");
-		    	e.printStackTrace();
-	    	} catch (ParseException e) {
-                Log.error("ParseException");
-		    	e.printStackTrace();
-	    	} catch (Exception e) {
-                Log.error("Exception");
-		    	e.printStackTrace();
 	    	}
-    }
+            catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
 
     public static void writeText(TaskList tasks, String fileName)  throws IOException {
         Log.debug("Writing tasks into a file");
