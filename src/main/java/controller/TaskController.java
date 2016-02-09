@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
+import model.AddTaskException;
 import model.ManagerModel;
+import model.RemoveTaskExeption;
 import model.Task;
 import org.slf4j.*;
 import view.*;
@@ -42,7 +44,13 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		Object source = event.getSource();
-		initialization.getAction(event.getActionCommand()).execute(this, source, model, view);
+		try {
+			initialization.getAction(event.getActionCommand()).execute(this, source, model, view);
+		} catch (RemoveTaskExeption removeTaskExeption) {
+			removeTaskExeption.printStackTrace();
+		} catch (AddTaskException e) {
+			e.printStackTrace();
+		}
 		Log.debug("Choosing action", event.getActionCommand());
 	}
 	public Task getTaskToEdit() {

@@ -26,7 +26,6 @@ public class MainView implements ActionList, List{
 	private ActionListener listener;
 	private CheckboxGroup delivery = new CheckboxGroup();
 	private static final Logger Log = LoggerFactory.getLogger(MainView.class);
-	public static Map<String, Checkbox> buttonMap = new HashMap<>();
 
 	public MainView() {
 		Log.debug("Starting constructor GUI");

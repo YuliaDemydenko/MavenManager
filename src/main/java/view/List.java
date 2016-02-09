@@ -4,17 +4,17 @@ import model.ArrayTaskList;
 import model.Task;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public interface List {
     public void addListener (ActionListener listen);
     public void onFrameCreate ();
-
     void setTasks(ArrayTaskList tasks);
-
     void addButton(JButton button);
-
     void onButtonAdd();
     public void close();
     public void onLabelAdd();
@@ -31,10 +31,9 @@ public interface List {
     public Task getTask();
     public void setTaskToEdit(Task task);
     public String getTaskToRemove();
-
     String getSelectedTask();
-
     void errorMessage(Object obj);
+    public static Map<String, Checkbox> buttonMap = new HashMap<>();
 
 
 }

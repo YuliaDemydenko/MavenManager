@@ -1,937 +1,418 @@
-10:06:19,821 INFO  main MainView: <init>: 40 - Buttons created 
-10:06:19,824 INFO  main MainView: onFrameCreate: 75 - Main is created 
-10:06:19,825 INFO  main MainView: onButtonAdd: 110 - Add button has been added into the Main Frame 
-10:06:19,828 INFO  main MainView: onButtonAdd: 114 - Drop button has been added into the Main Frame 
-10:06:19,828 INFO  main MainView: onButtonAdd: 118 - Update Button has been added into the Main Frame 
-10:06:19,828 INFO  main MainView: onButtonAdd: 122 - Filter button has been added into the Main Frame 
-10:06:19,966 INFO  main MainView: <init>: 63 - Buttons added on frame 
-10:06:20,053 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,055 INFO  main Task: setTitle: 51 - Title for task has been created 
-10:06:20,057 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
-10:06:20,057 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,057 INFO  main Task: setTitle: 51 - Title for task has been created 
-10:06:20,057 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
-10:06:20,057 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,058 INFO  main Task: setTitle: 51 - Title for task has been created 
-10:06:20,113 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
-10:06:20,115 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,115 INFO  main Task: setTitle: 51 - Title for task has been created 
-10:06:20,115 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
-10:06:20,115 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,115 INFO  main Task: setTitle: 51 - Title for task has been created 
-10:06:20,115 INFO  main Task: setTime: 70 - Time for task has been set 
-10:06:20,116 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
-10:06:20,130 INFO  main TaskController: showTasks: 35 - Task shows on the screen 
-10:06:20,164 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,164 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,165 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,166 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,166 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,166 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,166 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:20,167 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,168 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:20,168 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:20,168 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:20,310 INFO  main MainView: setTasks: 97 - tasks has been added into the Main Frame 
-10:06:21,169 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,169 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:21,170 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:21,170 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:22,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,170 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,171 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,171 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,171 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,171 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,171 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:22,173 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,173 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:22,173 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:22,174 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:23,175 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,175 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,176 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,176 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,176 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:23,177 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,177 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:23,177 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:23,177 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:24,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,177 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:24,178 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:24,178 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:25,179 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,179 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:25,180 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:25,180 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:26,181 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,181 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:26,182 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:26,182 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,182 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:27,183 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:27,183 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:28,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,183 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:28,184 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:28,184 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:29,185 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,185 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:29,186 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:29,186 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:30,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,186 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:30,187 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:30,187 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:31,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,187 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,188 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,188 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,188 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,189 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,189 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:31,189 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,189 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:31,189 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:31,189 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:32,190 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,190 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:32,191 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:32,191 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:33,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,191 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:33,192 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:33,192 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:34,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,192 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:34,193 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:34,193 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:35,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,193 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:35,194 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:35,194 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,194 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:36,195 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:36,195 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,195 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:37,196 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:37,197 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,197 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:38,198 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:38,198 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:39,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,198 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:39,199 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:39,199 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:40,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,199 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:40,200 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:40,200 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:41,201 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,201 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:41,202 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:41,202 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:42,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,202 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:42,203 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:42,203 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:43,204 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,204 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,204 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,204 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,204 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:43,205 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:43,205 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,206 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,207 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,207 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:44,207 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,207 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:44,207 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:44,207 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:45,073 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 79 - New frame has been created 
-10:06:45,074 INFO  AWT-EventQueue-0 AddView: timeItems: 224 - Items created 
-10:06:45,175 INFO  AWT-EventQueue-0 AddView: <init>: 59 - New window was created 
-10:06:45,175 INFO  AWT-EventQueue-0 ActionAdd: execute: 16 - Successful 'ADD' action 
-10:06:45,175 INFO  AWT-EventQueue-0 MainView: actionPerformed: 132 - Listener for Add button has been created 
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,209 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:45,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:45,210 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:45,210 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,210 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,211 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:46,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:46,212 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:46,212 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:46,995 ERROR AWT-EventQueue-0 MainView: errorMessage: 186 - Task wasn`t selected 
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:47,212 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:47,212 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:48,113 ERROR AWT-EventQueue-0 ActionDrop: execute: 27 - Wasn`t choose task for remove 
-10:06:48,113 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,212 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:48,213 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:48,213 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,213 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:49,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:49,214 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:49,214 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:50,010 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,214 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:50,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:50,215 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:50,215 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,215 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:51,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:51,216 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:51,216 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,216 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:52,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:52,217 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:52,217 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,217 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:53,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:53,218 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:53,218 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:53,922 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,218 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:54,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:54,219 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:54,219 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:54,514 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:54,666 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:54,834 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:54,970 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:55,122 INFO  AWT-EventQueue-0 MainView: actionPerformed: 140 - Listener for Drop button has been created 
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:55,219 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:55,220 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:55,220 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:55,611 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 79 - New frame has been created 
-10:06:55,615 INFO  AWT-EventQueue-0 AddView: timeItems: 224 - Items created 
-10:06:55,713 INFO  AWT-EventQueue-0 AddView: <init>: 59 - New window was created 
-10:06:55,715 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:06:55,715 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:06:55,720 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:06:55,720 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:06:55,720 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:06:55,721 INFO  AWT-EventQueue-0 AddView: setStartTimeToEdit: 304 - Set day 
-10:06:55,722 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:06:55,722 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:06:55,722 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:06:55,722 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:06:55,722 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:06:55,723 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
-10:06:55,724 INFO  AWT-EventQueue-0 MainView: actionPerformed: 148 - Listener for Update button has been created 
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:56,220 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:56,220 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,220 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:57,221 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,221 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:57,221 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:57,221 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,222 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:58,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:58,223 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:58,223 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,223 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:06:59,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:06:59,224 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:06:59,224 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,224 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:00,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:00,225 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:00,225 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,225 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:01,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:01,226 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:01,226 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,226 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:02,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:02,227 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:02,227 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,227 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:03,228 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,228 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:03,228 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:03,228 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:04,228 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,228 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,228 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,228 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,228 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,228 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:04,229 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:04,229 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:04,315 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 79 - New frame has been created 
-10:07:04,316 INFO  AWT-EventQueue-0 AddView: timeItems: 224 - Items created 
-10:07:04,404 INFO  AWT-EventQueue-0 AddView: <init>: 59 - New window was created 
-10:07:04,405 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:07:04,406 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:07:04,406 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:07:04,406 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:07:04,406 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
-10:07:04,407 INFO  AWT-EventQueue-0 AddView: setStartTimeToEdit: 304 - Set day 
-10:07:04,407 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:07:04,408 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:07:04,408 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:07:04,408 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:07:04,408 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
-10:07:04,409 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
-10:07:04,410 INFO  AWT-EventQueue-0 MainView: actionPerformed: 148 - Listener for Update button has been created 
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:05,229 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:05,230 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:05,230 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:06,230 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,231 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:06,231 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:06,231 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,231 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:07,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:07,232 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:07,232 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:08,232 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:08,233 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:08,233 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:09,233 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,234 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:09,234 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:09,234 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,234 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:10,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:10,235 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:10,235 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:11,235 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:11,236 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:11,236 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:12,236 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,237 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:12,237 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:12,237 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
-10:07:13,217 INFO  AWT-EventQueue-0 MainView: windowClosing: 45 - Window has been closed 
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,237 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,238 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
-10:07:13,238 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,238 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
-10:07:13,238 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
-10:07:13,238 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:03,861 INFO  main MainView: <init>: 39 - Buttons created 
+16:03:03,864 INFO  main MainView: onFrameCreate: 74 - Main is created 
+16:03:03,866 INFO  main MainView: onButtonAdd: 109 - Add button has been added into the Main Frame 
+16:03:03,869 INFO  main MainView: onButtonAdd: 113 - Drop button has been added into the Main Frame 
+16:03:03,869 INFO  main MainView: onButtonAdd: 117 - Update Button has been added into the Main Frame 
+16:03:03,869 INFO  main MainView: onButtonAdd: 121 - Filter button has been added into the Main Frame 
+16:03:03,954 INFO  main MainView: <init>: 62 - Buttons added on frame 
+16:03:04,086 INFO  main Task: setTime: 70 - Time for task has been set 
+16:03:04,086 INFO  main Task: setTitle: 51 - Title for task has been created 
+16:03:04,087 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
+16:03:04,088 INFO  main Task: setTime: 70 - Time for task has been set 
+16:03:04,089 INFO  main Task: setTitle: 51 - Title for task has been created 
+16:03:04,089 INFO  main Task: setTime: 70 - Time for task has been set 
+16:03:04,090 INFO  main ArrayTaskList: addTask: 29 - Task has been added into the frame 
+16:03:04,098 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:04,098 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:04,102 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:04,103 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:04,104 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:04,104 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:04,113 INFO  main TaskController: showTasks: 37 - Task shows on the screen 
+16:03:04,201 INFO  main MainView: setTasks: 96 - tasks has been added into the Main Frame 
+16:03:05,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:05,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:05,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:05,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:05,104 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:05,104 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:06,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:06,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:06,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:06,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:06,104 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:06,104 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:07,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:07,104 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:07,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:07,104 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:07,104 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:07,104 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:08,105 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:08,105 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:08,105 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:08,105 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:08,105 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:08,105 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:09,105 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:09,106 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:09,106 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:09,106 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:09,106 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:09,106 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:09,218 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 80 - New frame has been created 
+16:03:09,224 INFO  AWT-EventQueue-0 AddView: timeItems: 225 - Items created 
+16:03:09,350 INFO  AWT-EventQueue-0 AddView: <init>: 60 - New window was created 
+16:03:09,350 INFO  AWT-EventQueue-0 ActionAdd: execute: 17 - Successful 'ADD' action 
+16:03:09,351 INFO  AWT-EventQueue-0 MainView: actionPerformed: 131 - Listener for Add button has been created 
+16:03:10,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:10,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:10,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:10,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:10,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:10,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:11,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:11,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:11,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:11,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:11,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:11,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:12,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:12,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:12,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:12,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:12,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:12,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:13,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:13,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:13,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:13,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:13,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:13,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:14,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:14,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:14,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:14,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:14,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:14,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:15,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:15,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:15,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:15,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:15,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:15,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:16,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:16,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:16,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:16,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:16,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:16,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:16,516 INFO  AWT-EventQueue-0 Task: <init>: 36 - New task created 
+16:03:16,516 INFO  AWT-EventQueue-0 ArrayTaskList: addTask: 29 - Task has been added into the frame 
+16:03:16,516 INFO  AWT-EventQueue-0 TaskIO: textWriter: 114 - Choose date format 
+16:03:16,517 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:16,517 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:16,517 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:16,518 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:16,518 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:16,521 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:16,521 INFO  AWT-EventQueue-0 Task: getTime: 93 - Get new time 
+16:03:16,521 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:16,521 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:16,521 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:16,522 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:16,522 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:16,522 INFO  AWT-EventQueue-0 TaskController: showTasks: 37 - Task shows on the screen 
+16:03:16,554 INFO  AWT-EventQueue-0 MainView: setTasks: 96 - tasks has been added into the Main Frame 
+16:03:16,554 INFO  AWT-EventQueue-0 ManagerModel: addTask: 55 - Task list updated 
+16:03:16,560 INFO  AWT-EventQueue-0 AddView: close: 176 - Window closed 
+16:03:16,561 INFO  AWT-EventQueue-0 ActionSave: execute: 22 - Add frame closed 
+16:03:17,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:17,107 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:17,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:17,107 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:18,108 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:18,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:18,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:19,108 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:19,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:19,108 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:20,109 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:20,109 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:20,109 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:20,109 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:20,109 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:20,109 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:20,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:20,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:20,110 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:21,110 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:21,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:21,110 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:21,111 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:22,111 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:22,111 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:22,111 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:22,112 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:22,204 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 80 - New frame has been created 
+16:03:22,205 INFO  AWT-EventQueue-0 AddView: timeItems: 225 - Items created 
+16:03:22,298 INFO  AWT-EventQueue-0 AddView: <init>: 60 - New window was created 
+16:03:22,299 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:22,299 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:22,300 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:22,300 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:22,300 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:22,300 INFO  AWT-EventQueue-0 AddView: setStartTimeToEdit: 305 - Set day 
+16:03:22,301 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:22,301 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:22,301 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:22,301 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:22,302 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:22,303 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:22,303 INFO  AWT-EventQueue-0 MainView: actionPerformed: 147 - Listener for Update button has been created 
+16:03:23,112 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:23,112 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:23,112 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:23,112 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:23,112 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:23,112 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:23,112 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:23,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:23,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:24,113 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:24,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:24,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:25,113 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:25,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:25,113 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:25,114 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:25,805 INFO  AWT-EventQueue-0 Task: <init>: 36 - New task created 
+16:03:25,806 INFO  AWT-EventQueue-0 ArrayTaskList: removeTask: 50 - Task has been deleted 
+16:03:25,806 INFO  AWT-EventQueue-0 TaskIO: textWriter: 114 - Choose date format 
+16:03:25,807 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:25,807 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:25,807 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:25,807 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:25,808 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:25,808 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:25,808 INFO  AWT-EventQueue-0 Task: getTime: 93 - Get new time 
+16:03:25,809 INFO  AWT-EventQueue-0 TaskController: showTasks: 37 - Task shows on the screen 
+16:03:25,840 INFO  AWT-EventQueue-0 MainView: setTasks: 96 - tasks has been added into the Main Frame 
+16:03:25,840 INFO  AWT-EventQueue-0 ArrayTaskList: addTask: 29 - Task has been added into the frame 
+16:03:25,842 INFO  AWT-EventQueue-0 TaskIO: textWriter: 114 - Choose date format 
+16:03:25,843 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:25,844 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:25,844 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:25,844 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:25,844 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:25,844 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:25,844 INFO  AWT-EventQueue-0 Task: getTime: 93 - Get new time 
+16:03:25,844 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:25,845 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:25,845 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:25,845 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:25,845 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:25,846 INFO  AWT-EventQueue-0 TaskController: showTasks: 37 - Task shows on the screen 
+16:03:25,883 INFO  AWT-EventQueue-0 MainView: setTasks: 96 - tasks has been added into the Main Frame 
+16:03:25,884 INFO  AWT-EventQueue-0 ManagerModel: addTask: 55 - Task list updated 
+16:03:25,887 INFO  AWT-EventQueue-0 AddView: close: 176 - Window closed 
+16:03:25,887 INFO  AWT-EventQueue-0 ActionSave: execute: 22 - Add frame closed 
+16:03:26,114 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:26,114 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:26,114 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:26,114 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:27,116 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:27,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:27,116 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:28,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:28,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:28,116 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:28,116 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:28,116 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:28,116 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:28,116 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:28,117 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:28,117 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:29,117 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:29,117 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:29,117 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:29,118 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:30,108 INFO  AWT-EventQueue-0 AddView: onFrameCreate: 61 - New frame has been created 
+16:03:30,118 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:30,118 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:30,118 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:30,118 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:30,418 INFO  AWT-EventQueue-0 AddView: <init>: 43 - New window was created 
+16:03:30,418 INFO  AWT-EventQueue-0 MainView: actionPerformed: 155 - Listener for FILTER button has been created 
+16:03:31,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:31,119 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:31,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:31,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:32,119 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:32,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:32,119 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:33,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:33,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:33,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:34,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:34,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:34,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:34,187 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,188 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:34,188 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,193 INFO  AWT-EventQueue-0 AddView: close: 153 - Window closed 
+16:03:34,193 INFO  AWT-EventQueue-0 ActionApply: execute: 28 - Filter frame closed 
+16:03:34,193 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,194 INFO  AWT-EventQueue-0 Task: getStartTime: 105 - Get new time 
+16:03:34,194 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,194 INFO  AWT-EventQueue-0 Task: getEndTime: 115 - Get new time 
+16:03:34,194 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,194 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,195 INFO  AWT-EventQueue-0 ActionApply: execute: 22 - Show sorted task 
+16:03:34,195 INFO  AWT-EventQueue-0 AddView: close: 153 - Window closed 
+16:03:34,195 INFO  AWT-EventQueue-0 ActionApply: execute: 28 - Filter frame closed 
+16:03:34,195 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,199 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:34,199 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:34,200 INFO  AWT-EventQueue-0 AddView: close: 153 - Window closed 
+16:03:34,201 INFO  AWT-EventQueue-0 ActionApply: execute: 28 - Filter frame closed 
+16:03:35,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:35,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:35,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:35,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:35,939 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:35,941 INFO  AWT-EventQueue-0 ActionClean: execute: 16 - Show all task on the main frame 
+16:03:35,941 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:35,942 INFO  AWT-EventQueue-0 ActionClean: execute: 16 - Show all task on the main frame 
+16:03:35,942 INFO  AWT-EventQueue-0 ArrayTaskList: getTask: 54 - Something happenes 
+16:03:35,943 INFO  AWT-EventQueue-0 ActionClean: execute: 16 - Show all task on the main frame 
+16:03:35,943 INFO  AWT-EventQueue-0 MainView: actionPerformed: 163 - Listener for FILTER button has been created 
+16:03:36,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:36,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:36,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:36,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:37,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:37,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:37,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:38,120 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:38,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:38,120 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:38,121 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:38,243 INFO  AWT-EventQueue-0 ArrayTaskList: removeTask: 50 - Task has been deleted 
+16:03:38,244 INFO  AWT-EventQueue-0 TaskIO: textWriter: 114 - Choose date format 
+16:03:38,244 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:38,244 INFO  AWT-EventQueue-0 TaskIO: textWriter: 132 - Set output format for repeated tasks 
+16:03:38,245 INFO  AWT-EventQueue-0 Task: getStartTime: 101 - Get the same time  
+16:03:38,245 INFO  AWT-EventQueue-0 Task: getEndTime: 112 - Get the same time  
+16:03:38,245 INFO  AWT-EventQueue-0 Task: getRepeatInterval: 123 - Get previous interval, if repeated 
+16:03:38,246 INFO  AWT-EventQueue-0 TaskIO: textWriter: 119 - Set output format for unrepeated tasks 
+16:03:38,246 INFO  AWT-EventQueue-0 Task: getTime: 93 - Get new time 
+16:03:38,246 INFO  AWT-EventQueue-0 TaskController: showTasks: 37 - Task shows on the screen 
+16:03:38,264 INFO  AWT-EventQueue-0 MainView: setTasks: 96 - tasks has been added into the Main Frame 
+16:03:38,264 INFO  AWT-EventQueue-0 MainView: actionPerformed: 139 - Listener for Drop button has been created 
+16:03:39,121 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:39,121 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:39,121 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:39,121 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:39,121 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:39,121 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:40,121 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:40,121 INFO  Thread-2 Task: getStartTime: 101 - Get the same time  
+16:03:40,121 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:40,121 INFO  Thread-2 Task: getEndTime: 112 - Get the same time  
+16:03:40,121 INFO  Thread-2 Task: getStartTime: 105 - Get new time 
+16:03:40,121 INFO  Thread-2 Task: getEndTime: 115 - Get new time 
+16:03:40,387 INFO  AWT-EventQueue-0 MainView: windowClosing: 44 - Window has been closed 

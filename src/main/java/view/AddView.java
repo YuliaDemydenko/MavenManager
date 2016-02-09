@@ -53,6 +53,7 @@ public class AddView  implements ActionList, List{
 		panel.setBackground(Color.WHITE);
 		panel.setLayout(null);
 		onLabelAdd();
+		onButtonAdd();
 		timeItems();
 		frame.getContentPane().add(panel);
 		frame.setVisible(true);
@@ -336,10 +337,10 @@ public class AddView  implements ActionList, List{
 		Log.debug("Creating new task from the editing fields");
 		Task task;
 		if (getActivefield()){
-			task = new Task(getTitleField(),new Date(String.valueOf(getStartTimeField())), new Date(String.valueOf(getEndTimeField())), getRepeatIntervalField());
+			task = new Task(getTitleField(),getStartTimeField(),getEndTimeField(), getRepeatIntervalField());
 			task.setActive(getActivefield());
 		} else {
-			task = new Task(getTitleField(),new Date(String.valueOf(getStartTimeField())));
+			task = new Task(getTitleField(),getStartTimeField());
 		}
 		return task;
 	}
