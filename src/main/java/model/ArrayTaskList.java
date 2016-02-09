@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 import org.apache.log4j.*;
 
-public class ArrayTaskList extends TaskList implements TaskInterface{
+public class ArrayTaskList extends TaskList {
     public Task[] task_list = new Task[10];
     private static final Logger Log = Logger.getLogger(ArrayTaskList.class);
     private int size;
@@ -29,9 +29,10 @@ public class ArrayTaskList extends TaskList implements TaskInterface{
         Log.info("Task has been added into the frame");
     }
     @Override
-    public Task getTask(String title) {   return null;  }
+    public Task getTask(String title)
+    {   return null;  }
     @Override
-    public void removeTask(Task task) throws RemoveTaskExeption{
+    public void removeTask(TaskInterface task) throws RemoveTaskExeption{
         Log.debug("Removing task");
 		if (task == null) {
             Log.error("Task hasn`t been selected.");
@@ -50,11 +51,11 @@ public class ArrayTaskList extends TaskList implements TaskInterface{
         Log.info("Task has been deleted");
    }
     @Override
-    public Task getTask(int number) {
+    public Task getTask(int number) throws GetTaskExeption {
         Log.info("Something happenes");
         if ( number < 0 || number > size()-1) {
             Log.error("Something happened. IllegalArgumentException");
-            throw new IllegalArgumentException();
+            throw new GetTaskExeption("Nonexistent task with number:", number);
         } else {
             return task_list[number];
         }
@@ -109,63 +110,12 @@ public class ArrayTaskList extends TaskList implements TaskInterface{
         Iterator<Task> it = new ArrayListIterator();
         return it;
     }
-
-    @Override
-    public void notify(Object obj) {}
-
-    @Override
-    public ArrayTaskList getTaskList() { return null;  }
-    @Override
-    public void readTaskList(ArrayTaskList tasks) {}
-    @Override
-    public String getTitle() {
-        return null;
-    }
-    @Override
-    public boolean isActive() {
-        return false;
-    }
-    @Override
-    public void setActive(boolean active) {}
-    @Override
-    public void setTime(Date time) {}
-    @Override
-    public void setTime(Date start, Date end, long interval) {}
-    @Override
-    public Date getTime() {
-        return null;
-    }
-    @Override
-    public Date getStartTime() {
-        return null;
-    }
-    @Override
-    public Date getEndTime() {
-        return null;
-    }
-    @Override
-    public long getRepeatInterval() {
-        return 0;
-    }
-    @Override
-    public boolean isRepeated() {
-        return false;
-    }
-    @Override
-    public Date nextTimeAfter(Date current) {
-        return null;
-    }
-    @Override
-    public void setTitle(String title) {}
-
     class ArrayListIterator implements Iterator<Task> {
         private int cursor;
         private int last = -1;
-
         public boolean hasNext() {
            return cursor != size();
         }
-
         public Task next() {
             int i = cursor;
             if (i>= size())

@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 
 import model.ArrayTaskList;
 import model.Task;
+import model.TaskInterface;
 import org.slf4j.*;
 
 public class AddView  implements ActionList, List{
@@ -345,7 +346,7 @@ public class AddView  implements ActionList, List{
 		return task;
 	}
 	@Override
-	public void setTaskToEdit(Task task) {
+	public void setTaskToEdit(TaskInterface task) {
 		Log.debug("Setting chosen task to edit");
 		setTitleToEdit(task.getTitle());
 		setActiveToEdit(task.isActive());

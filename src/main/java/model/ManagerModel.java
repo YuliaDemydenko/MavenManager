@@ -4,17 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.*;
+
 import org.apache.log4j.*;
 
-public class ManagerModel  extends  Observable implements TaskInterface, view.ActionList{
+public class ManagerModel  extends  Observable implements ManagerInterface, view.ActionList{
 
 	private ArrayTaskList taskList = new ArrayTaskList();
 	private File file = new File(FILE_PATH, FILE_NAME);
-
-	public ManagerModel(File file) {
-		this.file = file;
-	}
-	private static final Logger Log = Logger.getLogger(ManagerModel.class);
+		private static final Logger Log = Logger.getLogger(ManagerModel.class);
 
 	public ManagerModel() {
 		readTaskList(taskList);
@@ -37,14 +34,14 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 				try {
 					removeTask(checkTask);
 				} catch (RemoveTaskExeption removeTaskExeption) {
-					removeTaskExeption.printStackTrace();
+					System.err.print("Error: " + removeTaskExeption);
 				}
 			}
 		}
 		try {
 			taskList.addTask(task);
 		} catch (AddTaskException e) {
-			e.printStackTrace();
+			System.err.print("Error: " + e);
 		}
 		try {
 			textWriter(taskList,file);
@@ -71,27 +68,11 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 		TaskIO.textWriter(tasks, fileName);
 	}
 	@Override
-	public Task getTask(int number) {
-		return null;
-	}
-	@Override
-	public int size() {
-		return 0;
-	}
-	@Override
-	public Iterator<Task> iterator() {
-		return null;
-	}
-	@Override
-	public void removeTask(Task task) throws RemoveTaskExeption {
+	public void removeTask(TaskInterface task) throws RemoveTaskExeption {
 		Log.debug("Removing tasks from the list");
 		for (Task tas : taskList) {
 			if (tas.getTitle().equals(task.getTitle())) {
-				try {
-					taskList.removeTask(task);
-				} catch (RemoveTaskExeption removeTaskExeption) {
-					removeTaskExeption.printStackTrace();
-				}
+				taskList.removeTask(task);
 			}
 		}
 		try {
@@ -122,28 +103,5 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 			e.printStackTrace();
 		}
 	}
-	@Override
-	public String getTitle() {	return null;}
-	@Override
-	public boolean isActive() {	return false;	}
-	@Override
-	public void setActive(boolean active) {}
-	@Override
-	public void setTime(Date time) {}
-	@Override
-	public void setTime(Date start, Date end, long interval) {}
-	@Override
-	public Date getTime() {	return null;}
-	@Override
-	public Date getStartTime() {return null;}
-	@Override
-	public Date getEndTime() {return null;}
-	@Override
-	public long getRepeatInterval() {return 0;}
-	@Override
-	public boolean isRepeated() {return false;}
-	@Override
-	public Date nextTimeAfter(Date current) {return null;}
-	@Override
-	public void setTitle(String title){}
+
 }

@@ -2,6 +2,7 @@ package view;
 
 import model.ArrayTaskList;
 import model.Task;
+import model.TaskInterface;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,7 +30,7 @@ public interface List {
     public void setEndTimeToEdit(int day, int month, int year, int hours, int minute);
     public void setRepeatInterval(long repeat);
     public Task getTask();
-    public void setTaskToEdit(Task task);
+    public void setTaskToEdit(TaskInterface task);
     public String getTaskToRemove();
     String getSelectedTask();
     void errorMessage(Object obj);

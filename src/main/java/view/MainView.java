@@ -5,12 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+
 import model.ArrayTaskList;
 import model.Task;
 import javax.swing.*;
+
+import model.TaskInterface;
 import org.slf4j.*;
 
 public class MainView implements ActionList, List{
@@ -212,7 +212,7 @@ public class MainView implements ActionList, List{
 	@Override
 	public Task getTask() {	return null;}
 	@Override
-	public void setTaskToEdit(Task task) {}
+	public void setTaskToEdit(TaskInterface task) {}
 	@Override
 	public String getTaskToRemove() {return null;}
 }

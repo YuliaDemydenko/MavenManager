@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Iterator;
 import org.apache.log4j.*;
 
-public class TaskIO implements TaskInterface {
+public class TaskIO  {
     public static  SimpleDateFormat dateFormat = new SimpleDateFormat("'['yyyy-MM-dd HH:mm:ss.SSS']'");
     private static final Logger Log = Logger.getLogger(TaskIO.class);
 
@@ -245,48 +245,5 @@ public class TaskIO implements TaskInterface {
                 tasks.addTask(task);
         }
     }
-    @Override
-    public void addTask(Task task) throws AddTaskException {}
-    @Override
-    public void removeTask(Task task) throws RemoveTaskExeption {}
-    @Override
-    public Task getTask(String title) { return null; }
-    @Override
-    public Task getTask(int number) { return null; }
-    @Override
-    public int size() { return 0; }
-    @Override
-    public ArrayTaskList clone() throws CloneNotSupportedException { return null; }
-    @Override
-    public Iterator<Task> iterator() { return null; }
-    @Override
-    public void notify(Object obj) {}
-    @Override
-    public ArrayTaskList getTaskList() { return null; }
-    @Override
-    public void readTaskList(ArrayTaskList tasks) {}
-    @Override
-    public String getTitle() { return null; }
-    @Override
-    public boolean isActive() { return false; }
-    @Override
-    public void setActive(boolean active) { }
-    @Override
-    public void setTime(Date time) { }
-    @Override
-    public void setTime(Date start, Date end, long interval) {}
-    @Override
-    public Date getTime() { return null; }
-    @Override
-    public Date getStartTime() { return null;  }
-    @Override
-    public Date getEndTime() {  return null;  }
-    @Override
-    public long getRepeatInterval() { return 0; }
-    @Override
-    public boolean isRepeated() {  return false;  }
-    @Override
-    public Date nextTimeAfter(Date current) { return null; }
-    @Override
-    public void setTitle(String title) {}
+
 }

@@ -2,6 +2,7 @@ package view;
 
 import model.ArrayTaskList;
 import model.Task;
+import model.TaskInterface;
 import org.slf4j.*;
 import javax.swing.*;
 import java.awt.*;
@@ -188,7 +189,7 @@ public class ShowView  implements ActionList, List{
     @Override
     public Task getTask() { return null;   }
     @Override
-    public void setTaskToEdit(Task task) {
+    public void setTaskToEdit(TaskInterface task) {
     }
     @Override
     public String getTaskToRemove() { return null;  }

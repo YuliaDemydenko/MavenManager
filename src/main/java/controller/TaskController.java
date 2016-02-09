@@ -5,10 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
-import model.AddTaskException;
-import model.ManagerModel;
-import model.RemoveTaskExeption;
-import model.Task;
+import model.*;
 import org.slf4j.*;
 import view.*;
 import view.ActionList;
@@ -16,8 +13,9 @@ import static controller.ActionControll.getActionControll;
 
 public class TaskController  implements ActionList, ActionListener, Observer {
 
-	private MainView view;
-	private ManagerModel model;
+	private List view;
+	private ManagerInterface model;
+
 	private static ActionControll initialization = getActionControll();
 	private static final TaskController controller= new TaskController();
 	private static final Logger Log = LoggerFactory.getLogger(TaskController.class);
@@ -50,11 +48,13 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 			removeTaskExeption.printStackTrace();
 		} catch (AddTaskException e) {
 			e.printStackTrace();
+		} catch (GetTaskExeption getTaskExeption) {
+			getTaskExeption.printStackTrace();
 		}
 		Log.debug("Choosing action", event.getActionCommand());
 	}
-	public Task getTaskToEdit() {
-		Task task = model.getTask(view.getSelectedTask());
+	public TaskInterface getTaskToEdit() {
+		TaskInterface task = model.getTask(view.getSelectedTask());
 		Log.debug("Return task to set it to edit window", task);
 		return task;
 	}
@@ -71,7 +71,7 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 			Log.debug("Task removing from frame", arg1);
 			showTasks();
 		}
-		if (arg1 instanceof Task) {
+		if (arg1 instanceof TaskInterface) {
 			Log.debug("Adding new task into the frame");
 			List messageView =  new MessageView();
 			messageView.setTaskToEdit((Task) arg1);

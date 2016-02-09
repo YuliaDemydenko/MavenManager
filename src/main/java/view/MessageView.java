@@ -3,7 +3,6 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,6 +10,7 @@ import javax.swing.JPanel;
 
 import model.ArrayTaskList;
 import model.Task;
+import model.TaskInterface;
 import org.slf4j.*;
 
 public class MessageView implements ActionList, List {
@@ -74,7 +74,7 @@ public class MessageView implements ActionList, List {
 		messageFrame.add(closeButton);
 	}
 	@Override
-	public void setTaskToEdit(Task task) {
+	public void setTaskToEdit(TaskInterface task) {
 		taskLabel.setText(task.getTitle());
 	}
 	@Override

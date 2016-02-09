@@ -140,27 +140,6 @@ public class Task implements TaskInterface, Cloneable, Serializable {
             return ("Task: " + title + " at " + start);
         }
     }
-
-    @Override
-    public Iterator<Task> iterator() {
-        return null;
-    }
-
-    @Override
-    public void notify(Object obj) {
-
-    }
-
-    @Override
-    public ArrayTaskList getTaskList() {
-        return null;
-    }
-
-    @Override
-    public void readTaskList(ArrayTaskList tasks) {
-
-    }
-
     @Override
     public Date nextTimeAfter(Date current) {
         if (isActive()) {
@@ -182,17 +161,6 @@ public class Task implements TaskInterface, Cloneable, Serializable {
         }
         else return null;
     }
-
-    @Override
-    public void addTask(Task task) throws AddTaskException {}
-    @Override
-    public void removeTask(Task task) throws RemoveTaskExeption {}
-    @Override
-    public Task getTask(String title) {  return null;  }
-    @Override
-    public Task getTask(int number) { return null;  }
-    @Override
-    public int size() {    return 0;  }
 
     public Task clone() throws CloneNotSupportedException {
             Task cloned = (Task) super.clone();

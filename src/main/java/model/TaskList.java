@@ -4,21 +4,15 @@ import java.util.*;
 import java.io.*;
 import org.apache.log4j.*;
 
-public abstract class TaskList implements TaskInterface, Cloneable, Iterable<Task>, Serializable {
+public abstract class TaskList implements Cloneable, Iterable<Task>, Serializable {
 
-    @Override
     public abstract void addTask(Task task) throws AddTaskException;
-
-    @Override
-    public abstract void removeTask(Task task) throws RemoveTaskExeption;
-
-    @Override
+    public abstract void removeTask(TaskInterface task) throws RemoveTaskExeption;
     public Task getTask(String title) {
         return null;
     }
-
     private static final Logger Log = Logger.getLogger(TaskList.class);
-    public abstract Task getTask(int number);
+    public abstract Task getTask(int number) throws GetTaskExeption;
     public abstract int size();
 
     @Override
@@ -56,8 +50,6 @@ public abstract class TaskList implements TaskInterface, Cloneable, Iterable<Tas
 	}
 		return (ArrayTaskList) cloned;
 	}
-
-
     private class TaskListIterator implements Iterator<Task> {
 
         int cursor = 0;    // index of next element to return

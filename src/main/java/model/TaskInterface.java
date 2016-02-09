@@ -4,19 +4,8 @@ import java.util.Date;
 import java.util.Iterator;
 
 public interface TaskInterface {
-    public void addTask(Task task) throws AddTaskException;
-    public void removeTask(Task task) throws RemoveTaskExeption;
-    public Task getTask(String title);
-    public Task getTask(int number);
-    public int size();
-    public boolean equals(Object list);
-    public int hashCode();
-    public String toString();
-    public Iterator<Task> iterator();
-    public void notify(Object obj);
-    public ArrayTaskList getTaskList();
-    public void readTaskList(ArrayTaskList tasks);
     public String getTitle();
+    public void setTitle(String title);
     public boolean isActive();
     public void setActive(boolean active);
     public void setTime(Date time);
@@ -26,8 +15,11 @@ public interface TaskInterface {
     public Date getEndTime();
     public long getRepeatInterval();
     public boolean isRepeated();
+    public String toString();
     public Date nextTimeAfter(Date current);
-    public void setTitle(String title);
+    public Task clone() throws CloneNotSupportedException;
+    public boolean equals(Object obj);
+    public int hashCode();
 }
 
 

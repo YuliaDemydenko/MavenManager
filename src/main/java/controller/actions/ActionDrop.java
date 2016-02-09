@@ -1,9 +1,6 @@
 package controller.actions;
 
-import model.ManagerModel;
-import model.RemoveTaskExeption;
-import model.Task;
-import model.TaskInterface;
+import model.*;
 import org.slf4j.*;
 import view.List;
 import view.MainView;
@@ -13,13 +10,13 @@ import java.io.IOException;
 public class ActionDrop implements Action {
 	private static final Logger Log = LoggerFactory.getLogger(ActionDrop.class);
 	@Override
-		public void execute(ActionListener listen, Object source, TaskInterface model, List view) {
-			if (source instanceof MainView)
+		public void execute(ActionListener listen, Object source, ManagerInterface model, List view) {
+			if (source instanceof List)
 				try {
-					if (((MainView) source).getSelectedTask() != null) {
-						Log.debug("Getting task that was selected", ((MainView) source).getSelectedTask());
+					if (((List) source).getSelectedTask() != null) {
+						Log.debug("Getting task that was selected", ((List) source).getSelectedTask());
 						for (Task task : model.getTaskList()) {
-							if (task.getTitle().equals(((MainView) source).getSelectedTask())) {
+							if (task.getTitle().equals(((List) source).getSelectedTask())) {
 								Log.debug("Removing task from main frame", task.getTitle());
 								model.removeTask(task);
 							}
