@@ -2,6 +2,7 @@ package controller.actions;
 
 import model.AddTaskException;
 import model.ManagerModel;
+import model.TaskInterface;
 import org.slf4j.*;
 import view.AddView;
 import view.List;
@@ -12,17 +13,12 @@ import java.io.IOException;
 public class ActionSave implements Action {
 	private static final Logger Log = LoggerFactory.getLogger(ActionSave.class);
     @Override
-    public void execute(ActionListener listen, Object source, ManagerModel model, MainView view) {
+    public void execute(ActionListener listen, Object source, TaskInterface model, List view) throws AddTaskException {
 		if (source instanceof AddView) {
-
-            try {
-                model.addTask(((List) source).getTask());
-            } catch (AddTaskException e) {
-                e.printStackTrace();
-            }
+                model.addTask(((AddView) source).getTask());
         }
 		Log.debug("Getting new task");
-		((List) source).close();
+		((AddView) source).close();
 		    Log.info("Add frame closed");
 	}
 }

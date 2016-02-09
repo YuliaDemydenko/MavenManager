@@ -3,7 +3,9 @@ package controller.actions;
 import model.ManagerModel;
 import model.RemoveTaskExeption;
 import model.Task;
+import model.TaskInterface;
 import org.slf4j.*;
+import view.List;
 import view.MainView;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -11,7 +13,7 @@ import java.io.IOException;
 public class ActionDrop implements Action {
 	private static final Logger Log = LoggerFactory.getLogger(ActionDrop.class);
 	@Override
-		public void execute(ActionListener listen, Object source, ManagerModel model, MainView view) {
+		public void execute(ActionListener listen, Object source, TaskInterface model, List view) {
 			if (source instanceof MainView)
 				try {
 					if (((MainView) source).getSelectedTask() != null) {
