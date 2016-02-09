@@ -84,7 +84,7 @@ public abstract class TaskList implements TaskInterface, Cloneable, Iterable<Tas
         if ((last < 0) || (nextCount == 0))
             throw new IllegalStateException();
         try {
-            TaskList.this.remove(tasks[last]);
+            TaskList.this.removeTask(tasks[last]);
             if (last < cursor)
                 cursor--;
             last = -1;

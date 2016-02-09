@@ -27,6 +27,7 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 		notifyObservers(obj);
 		Log.debug("Notifying Observer about changes");
 	}
+	@Override
 	public void addTask(Task task) throws AddTaskException{
 		Log.debug("Adding new task into task list");
 		for (Task checkTask : taskList) {
@@ -52,11 +53,6 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 		}
 		notify(UPDATE);
 		Log.info("Task list updated");
-	}
-
-	@Override
-	public void removeTask(Task task) throws RemoveTaskExeption {
-
 	}
 	@Override
 	public ArrayTaskList getTaskList() {
@@ -87,12 +83,12 @@ public class ManagerModel  extends  Observable implements TaskInterface, view.Ac
 		return null;
 	}
 	@Override
-	public void remove(Task task) throws RemoveTaskExeption {
+	public void removeTask(Task task) throws RemoveTaskExeption {
 		Log.debug("Removing tasks from the list");
 		for (Task tas : taskList) {
 			if (tas.getTitle().equals(task.getTitle())) {
 				try {
-					taskList.remove(task);
+					taskList.removeTask(task);
 				} catch (RemoveTaskExeption removeTaskExeption) {
 					removeTaskExeption.printStackTrace();
 				}

@@ -7,7 +7,6 @@ public interface TaskInterface {
     public void addTask(Task task) throws AddTaskException;
     public void removeTask(Task task) throws RemoveTaskExeption;
     public Task getTask(String title);
-    public void remove(Task task) throws RemoveTaskExeption;
     public Task getTask(int number);
     public int size();
     public boolean equals(Object list);

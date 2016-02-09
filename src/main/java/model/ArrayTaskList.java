@@ -28,14 +28,10 @@ public class ArrayTaskList extends TaskList implements TaskInterface{
         this.size ++;
         Log.info("Task has been added into the frame");
     }
-
-
-    @Override
-    public void removeTask(Task task) throws RemoveTaskExeption { }
     @Override
     public Task getTask(String title) {   return null;  }
     @Override
-    public void remove(Task task) throws RemoveTaskExeption{
+    public void removeTask(Task task) throws RemoveTaskExeption{
         Log.debug("Removing task");
 		if (task == null) {
             Log.error("Task hasn`t been selected.");
@@ -186,7 +182,7 @@ public class ArrayTaskList extends TaskList implements TaskInterface{
           throw new IllegalStateException();
           Log.error("IllegalStateException");
             try {
-                ArrayTaskList.this.remove(task_list[last]);
+                ArrayTaskList.this.removeTask(task_list[last]);
                 cursor = last;
                 last = -1;
             } catch (RemoveTaskExeption removeTaskExeption) {

@@ -252,8 +252,6 @@ public class TaskIO implements TaskInterface {
     @Override
     public Task getTask(String title) { return null; }
     @Override
-    public void remove(Task task) throws RemoveTaskExeption {}
-    @Override
     public Task getTask(int number) { return null; }
     @Override
     public int size() { return 0; }
