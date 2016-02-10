@@ -7,7 +7,7 @@ import view.ActionList;
 
 public class ActionControll implements ActionList {
     private Map<String, Action> map = new HashMap<>();
-    private static  final ActionControll action = new ActionControll();
+    public static  final ActionControll ACTION = new ActionControll();
     public void init ()
     {
         map.put(ACTION_ADD, new ActionAdd());
@@ -25,9 +25,10 @@ public class ActionControll implements ActionList {
 
     }
     public static ActionControll getActionControll () {
-        return action;
+        return ACTION;
     }
     public Action getAction (String key) {
         return map.get(key);
     }
+
 }

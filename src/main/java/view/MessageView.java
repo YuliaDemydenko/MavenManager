@@ -7,13 +7,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import model.ArrayTaskList;
 import model.Task;
 import model.TaskInterface;
 import org.slf4j.*;
 
-public class MessageView implements ActionList, List {
+public class MessageView implements ActionList, MethodsViewInterface {
 
 	private JPanel panel;
 	private JFrame messageFrame;
@@ -24,7 +23,7 @@ public class MessageView implements ActionList, List {
 	private static final Logger Log = LoggerFactory.getLogger(MessageView.class);
 
 	public MessageView() {
-		Log.debug("Creating new window for message");
+		Log.info("Creating new window for message");
 		messageFrame = new JFrame("Message");
 		panel = new JPanel();
 		taskLabel = new JLabel();
@@ -75,6 +74,7 @@ public class MessageView implements ActionList, List {
 	}
 	@Override
 	public void setTaskToEdit(TaskInterface task) {
+		Log.debug("Setting task to edit: " + task.getTitle());
 		taskLabel.setText(task.getTitle());
 	}
 	@Override
@@ -85,7 +85,7 @@ public class MessageView implements ActionList, List {
 	}
 	@Override
 	public String getTaskToRemove() {
-		Log.debug("Getting task name to remove");
+		Log.debug("Getting task name to remove: " +  taskLabel.getText());
 		return taskLabel.getText();
 	}
 
@@ -93,10 +93,8 @@ public class MessageView implements ActionList, List {
 	public String getSelectedTask() {
 		return null;
 	}
-
 	@Override
 	public void errorMessage(Object obj) {
-
 	}
 	@Override
 	public void setTasks(ArrayTaskList tasks) {	}

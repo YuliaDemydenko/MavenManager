@@ -13,17 +13,21 @@ import static controller.ActionControll.getActionControll;
 
 public class TaskController  implements ActionList, ActionListener, Observer {
 
-	private List view;
+	private MethodsViewInterface view;
 	private ManagerInterface model;
 
-	private static ActionControll initialization = getActionControll();
-	private static final TaskController controller= new TaskController();
-	private static final Logger Log = LoggerFactory.getLogger(TaskController.class);
+	public static ActionControll initialization = getActionControll();
+	public static final TaskController CONTROLLER = new TaskController();
+	private static final Logger LOG = LoggerFactory.getLogger(TaskController.class);
 
-	private TaskController()  {
+	public TaskController()  {
 		this.view = new MainView();
 		view.addListener(this);
-		this.model = new ManagerModel();
+		try {
+			this.model = new ManagerModel();
+		} catch (AddTaskException e) {
+			e.printStackTrace();
+		}
 		model.addObserver(this);
 		initialization.init();
 		}
@@ -32,30 +36,31 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 		getController().showTasks();
 	}
 	public void showTasks () {
-		Log.info("Task shows on the screen");
+		LOG.info("Task shows on the screen");
 		view.setTasks(model.getTaskList());
 	}
 	public static TaskController getController()
 	{
-		return controller;
+		return CONTROLLER;
 	}
+
 	@Override
-	public void actionPerformed(ActionEvent event) {
+	public  void actionPerformed(ActionEvent event) {
 		Object source = event.getSource();
 		try {
 			initialization.getAction(event.getActionCommand()).execute(this, source, model, view);
-		} catch (RemoveTaskExeption removeTaskExeption) {
-			removeTaskExeption.printStackTrace();
-		} catch (AddTaskException e) {
-			e.printStackTrace();
-		} catch (GetTaskExeption getTaskExeption) {
-			getTaskExeption.printStackTrace();
-		}
-		Log.debug("Choosing action", event.getActionCommand());
+	} catch (RemoveTaskExeption removeTaskExeption) {
+		removeTaskExeption.printStackTrace();
+	} catch (AddTaskException e) {
+		e.printStackTrace();
+	} catch (GetTaskExeption getTaskExeption) {
+		getTaskExeption.printStackTrace();
 	}
-	public TaskInterface getTaskToEdit() {
+		LOG.debug("Choosing ACTION", event.getActionCommand());
+	}
+	public TaskInterface getTaskToEdit() throws TaskNotFoundExeption {
 		TaskInterface task = model.getTask(view.getSelectedTask());
-		Log.debug("Return task to set it to edit window", task);
+		LOG.debug("Return task to set it to edit window", task);
 		return task;
 	}
 	/**
@@ -64,16 +69,16 @@ public class TaskController  implements ActionList, ActionListener, Observer {
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		if (arg1==UPDATE) {
-			Log.debug("Updating frame", arg1);
+			LOG.debug("Updating frame", arg1);
 			showTasks();
 		}
 		if( arg1==REMOVE){
-			Log.debug("Task removing from frame", arg1);
+			LOG.debug("Task removing from frame", arg1);
 			showTasks();
 		}
 		if (arg1 instanceof TaskInterface) {
-			Log.debug("Adding new task into the frame");
-			List messageView =  new MessageView();
+			LOG.debug("Adding new task into the frame");
+			MethodsViewInterface messageView =  new MessageView();
 			messageView.setTaskToEdit((Task) arg1);
 			messageView.addListener(this);
 		}

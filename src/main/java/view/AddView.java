@@ -13,12 +13,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import model.AddTaskException;
 import model.ArrayTaskList;
 import model.Task;
 import model.TaskInterface;
 import org.slf4j.*;
 
-public class AddView  implements ActionList, List{
+public class AddView  implements ActionList, MethodsViewInterface {
 
 	private JFrame frame;
 	private JLabel JNameLabel;
@@ -46,7 +47,6 @@ public class AddView  implements ActionList, List{
 	private static final Logger Log = LoggerFactory.getLogger(AddView.class);
 
 	public AddView(String title) {
-		Log.debug("Creating new window");
 		frame = new JFrame(title);
 		panel = new JPanel();
 		onFrameCreate();
@@ -65,10 +65,8 @@ public class AddView  implements ActionList, List{
 		Log.debug("Adding listener");
 		listener = listen;
 	}
-
 	@Override
 	public void onFrameCreate() {
-		Log.debug("Creating new frame for add");
 		frame.setSize(420, 300);
 		frame.setLocation(400, 100);
 		frame.setLayout(new BorderLayout());
@@ -84,8 +82,7 @@ public class AddView  implements ActionList, List{
 	public void setTasks(ArrayTaskList tasks) {	}
 	@Override
 	public void addButton(JButton button) {	}
-
-	@Override
+		@Override
 	public void onButtonAdd() {
 		Log.debug("Creating buttons for add frame");
 		saveButton = new JButton("Save");
@@ -94,25 +91,26 @@ public class AddView  implements ActionList, List{
 		cancelButton = new JButton("Cancel");
 		cancelButton.setSize(80, 30);
 		cancelButton.setLocation(260, 220);
-		cancelButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				Log.debug("Creating CLOSE button");
-				ActionEvent ev = new ActionEvent(AddView.this, 0, ACTION_CLOSE);
-				listener.actionPerformed(ev);
-			}
-		});
 		saveButton.setLayout(null);
 		cancelButton.setLayout(null);
-		saveButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				Log.debug("Creating SAVE button");
-				ActionEvent ev = new ActionEvent(AddView.this, 0, ACTION_SAVE);
-				listener.actionPerformed(ev);
-			}
-		});
+		cancelButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					Log.debug("Creating CLOSE button");
+					ActionEvent ev = new ActionEvent(AddView.this, 0, ACTION_CLOSE);
+					listener.actionPerformed(ev);
+				}
+			});
+			saveButton.setLayout(null);
+			cancelButton.setLayout(null);
+			saveButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					Log.debug("Creating SAVE button");
+					ActionEvent ev = new ActionEvent(AddView.this, 0, ACTION_SAVE);
+					listener.actionPerformed(ev);
+				}
+			});
 		frame.add(saveButton);
-		frame.add(cancelButton);
-		Log.debug("Buttons has been created");
+			frame.add(cancelButton);
 	}
 	@Override
 	public void onLabelAdd() {
@@ -178,7 +176,7 @@ public class AddView  implements ActionList, List{
 	}
 	@Override
 	public void timeItems () {
-		Log.debug("Adding items for date");
+		Log.info("Adding items for date");
 		for (int i =1; i<=31;i++){
 			if (i<10) {
 				StartDate.addItem("0"+i+"");
@@ -227,12 +225,12 @@ public class AddView  implements ActionList, List{
 	}
 	@Override
 	public String getTitleField () {
-		Log.debug("Returning text from title Edit");
+		Log.debug("Returning text from title Edit" + titleEdit.getText());
 		return titleEdit.getText();
 	}
 	@Override
 	public boolean getActivefield() {
-		Log.debug("Returning the activity of task");
+		Log.debug("Returning the activity of task" + activeEdit.getSelectedIndex());
 		int taskActive =activeEdit.getSelectedIndex();
 		if (taskActive == 0) {
 			return true;
@@ -241,7 +239,7 @@ public class AddView  implements ActionList, List{
 		}
 	}
 	public Date getStartTimeField() {
-		Log.debug("Return start time of task");
+
 		int startDate = Integer.parseInt(StartDate.getSelectedItem());
 		int startMonth = Integer.parseInt(StartMonth.getSelectedItem());
 		int startYear = Integer.parseInt(StartYear.getSelectedItem());
@@ -249,6 +247,7 @@ public class AddView  implements ActionList, List{
 		int startMinute = Integer.parseInt(StartMinute.getSelectedItem());
 		Calendar startTime = Calendar.getInstance();
 		startTime.set(startYear, startMonth - 1, startDate, startHour, startMinute, 0);
+		Log.debug("Return start time of task: " + startTime.getTime() );
 		return startTime.getTime();
 	}
 	public static Date getEndTimeField() {
@@ -260,11 +259,13 @@ public class AddView  implements ActionList, List{
 		int endMinute = Integer.parseInt(EndMinute.getSelectedItem());
 		Calendar endTime = Calendar.getInstance();
 		endTime.set(endYear,endMonth-1, endDate, endHour, endMinute,0);
+		Log.debug("Return start time of task: " + endTime.getTime());
 		return endTime.getTime();
 	}
+
 	@Override
 	public long getRepeatIntervalField() {
-		Log.debug("Return interval of task");
+		Log.debug("Return interval of task" + Interval.getSelectedItem());
 		String repeat = Interval.getSelectedItem();
 		if (repeat.equals("Every minute")) {
 			return 1*60*1000;
@@ -279,10 +280,11 @@ public class AddView  implements ActionList, List{
 		}
 		else
 			return 365*24*60*60*1000;
+
 	}
 	@Override
 	public void setTitleToEdit(String title) {
-		Log.debug("Setting title of update task");
+		Log.debug("Setting title of update task: " + title);
 		titleEdit.setText(title);
 	}
 	/**
@@ -291,7 +293,7 @@ public class AddView  implements ActionList, List{
 	 */
 	@Override
 	public void setActiveToEdit(boolean act) {
-		Log.debug("Setting activity for task");
+		Log.debug("Setting activity for task: " + act);
 		if (act) {
 			activeEdit.select(0);
 		} else {
@@ -301,24 +303,26 @@ public class AddView  implements ActionList, List{
 	@Override
 	public void setStartTimeToEdit(int day, int month, int year, int hours, int minute) {
 		Log.debug("Selecting date on the start edits");
+		Log.debug("Start calendar time for adding task:" + day + month + year + hours + minute);
 		Calendar calendar = Calendar.getInstance();
-		StartDate.select(day-1);
-		Log.info("Set day");
+		StartDate.select(day - 1);
 		StartMonth.select(month);
 		StartYear.select(year-calendar.get(Calendar.YEAR));
 		StartHour.select(hours);
 		StartMinute.select(minute);
+		Log.debug("Updated start time for task" + StartDate + StartMonth + StartYear + StartHour + StartMinute);
 	}
 	@Override
 	public void setEndTimeToEdit(int day, int month, int year, int hours, int minute) {
 		Log.debug("Selecting date on the end edits");
+		Log.debug("End calendar time for adding task:" + day + month + year + hours + minute);
 		Calendar calendar = Calendar.getInstance();
 		EndDate.select(day-1);
 		EndMonth.select(month);
 		EndYear.select(year-calendar.get(Calendar.YEAR));
 		EndHour.select(hours);
 		EndMinute.select(minute);
-
+		Log.debug("Updated end time for task" + EndDate + EndMonth + EndYear + EndHour + EndMinute);
 	}
 	@Override
 	public void setRepeatInterval(long repeat) {
@@ -334,8 +338,8 @@ public class AddView  implements ActionList, List{
 		}
 	}
 	@Override
-	public Task getTask() {
-		Log.debug("Creating new task from the editing fields");
+	public Task getTask() throws AddTaskException {
+		Log.info("Creating new task from the editing fields");
 		Task task;
 		if (getActivefield()){
 			task = new Task(getTitleField(),getStartTimeField(),getEndTimeField(), getRepeatIntervalField());
@@ -343,55 +347,52 @@ public class AddView  implements ActionList, List{
 		} else {
 			task = new Task(getTitleField(),getStartTimeField());
 		}
+		Log.debug("New task created: " + task);
 		return task;
 	}
 	@Override
 	public void setTaskToEdit(TaskInterface task) {
-		Log.debug("Setting chosen task to edit");
+		Log.info("Setting chosen task to edit");
 		setTitleToEdit(task.getTitle());
 		setActiveToEdit(task.isActive());
 		setStartTimeToEdit(getDay(task.getStartTime()), getMonth(task.getStartTime()), getYear(task.getStartTime()), getHour(task.getStartTime()), getMinute(task.getStartTime()));
 		setEndTimeToEdit(getDay(task.getEndTime()), getMonth(task.getEndTime()), getYear(task.getEndTime()), getHour(task.getEndTime()), getMinute(task.getEndTime()));
 		setRepeatInterval(task.getRepeatInterval());
 	}
-
 	@Override
 	public String getTaskToRemove() {
 		return null;
 	}
-
 	@Override
 	public String getSelectedTask() {
 		return null;
 	}
-
 	@Override
 	public void errorMessage(Object obj) {
-
 	}
 
 	public int getDay(Date data) {
-		Log.debug("Gets day from data");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
+		Log.debug("Gets day from data" + cal.get(Calendar.DATE));
 		return cal.get(Calendar.DATE);
 	}
 	public int getMonth(Date data) {
-		Log.debug("Gets month from data");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
+		Log.debug("Gets month from data" + Calendar.MONTH);
 		return cal.get(Calendar.MONTH);
 	}
 	public int getYear(Date data) {
-		Log.debug("Gets year from data");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
+		Log.debug("Gets year from data" + Calendar.YEAR);
 		return cal.get(Calendar.YEAR);
 	}
 	public int getHour(Date data) {
-		Log.debug("Gets hours from data");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
+		Log.debug("Gets hours from data" + Calendar.HOUR_OF_DAY);
 		return cal.get(Calendar.HOUR_OF_DAY);
 	}
 
@@ -399,6 +400,7 @@ public class AddView  implements ActionList, List{
 		Log.debug("Gets minutes from data");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
+		Log.debug("Gets minutes from data" + Calendar.MINUTE);
 		return cal.get(Calendar.MINUTE);
 	}
 }

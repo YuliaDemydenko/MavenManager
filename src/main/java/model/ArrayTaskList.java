@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 import org.slf4j.*;
 
-public class ArrayTaskList extends TaskList implements ArrayTaskListInterface {
+public class ArrayTaskList extends TaskList {
     public TaskInterface[] task_list = new Task[10];
     private static final Logger Log = LoggerFactory.getLogger(ArrayTaskList.class);
     private int size;

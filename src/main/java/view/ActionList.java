@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * This interface contain action commands to controller.
+ * This interface contain ACTION commands to CONTROLLER.
  */
 public interface ActionList {
 	String ACTION_ADD = "Add";

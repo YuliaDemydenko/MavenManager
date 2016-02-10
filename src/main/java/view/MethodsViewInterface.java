@@ -1,5 +1,6 @@
 package view;
 
+import model.AddTaskException;
 import model.ArrayTaskList;
 import model.Task;
 import model.TaskInterface;
@@ -11,7 +12,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public interface List {
+public interface MethodsViewInterface {
     public void addListener (ActionListener listen);
     public void onFrameCreate ();
     void setTasks(ArrayTaskList tasks);
@@ -29,7 +30,7 @@ public interface List {
     public void setStartTimeToEdit(int day, int month, int year, int hours, int minute);
     public void setEndTimeToEdit(int day, int month, int year, int hours, int minute);
     public void setRepeatInterval(long repeat);
-    public Task getTask();
+    public Task getTask() throws AddTaskException;
     public void setTaskToEdit(TaskInterface task);
     public String getTaskToRemove();
     String getSelectedTask();

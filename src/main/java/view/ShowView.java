@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ShowView  implements ActionList, List{
+public class ShowView  implements ActionList, MethodsViewInterface {
 
     private JFrame frame;
     private JLabel JStartLabel;

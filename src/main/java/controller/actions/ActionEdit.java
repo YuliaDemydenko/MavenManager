@@ -1,28 +1,31 @@
 package controller.actions;
 
 import model.ManagerInterface;
-import model.ManagerModel;
-import model.TaskInterface;
+import model.TaskNotFoundExeption;
 import org.slf4j.*;
 import view.AddView;
-import view.List;
-import view.MainView;
+import view.MethodsViewInterface;
+
 import java.awt.event.ActionListener;
 import static controller.TaskController.getController;
 
 public class ActionEdit implements Action {
-    private static final Logger Log = LoggerFactory.getLogger(ActionEdit.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ActionEdit.class);
     @Override
-    public void execute(ActionListener listen, Object source, ManagerInterface model, List view) {
-        if (((List) source).getSelectedTask() != null) {
-            Log.debug(" 'UPDATE' existing task",((List) source).getSelectedTask());
-            List addView = new AddView("Edit task");
+    public void execute(ActionListener listen, Object source, ManagerInterface model, MethodsViewInterface view) {
+        if (((MethodsViewInterface) source).getSelectedTask() != null) {
+            LOG.debug(" 'UPDATE' existing task",((MethodsViewInterface) source).getSelectedTask());
+            MethodsViewInterface addView = new AddView("Edit task");
             addView.addListener(listen);
-            addView.setTaskToEdit(getController().getTaskToEdit());
+            try {
+                addView.setTaskToEdit(getController().getTaskToEdit());
+            } catch (TaskNotFoundExeption taskNotFoundExeption) {
+                taskNotFoundExeption.printStackTrace();
+            }
         }
         else {
             view.errorMessage("Check task to edit");
-			Log.error("Wasn`t choose task to update");
+            LOG.error("Wasn`t choose task to update");
         }
     }
 }

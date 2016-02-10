@@ -5,15 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
 import model.ArrayTaskList;
 import model.Task;
 import javax.swing.*;
-
 import model.TaskInterface;
 import org.slf4j.*;
 
-public class MainView implements ActionList, List{
+public class MainView implements ActionList, MethodsViewInterface {
 
 	private JFrame frame;
 	private JPanel panel;
@@ -28,7 +26,7 @@ public class MainView implements ActionList, List{
 	private static final Logger Log = LoggerFactory.getLogger(MainView.class);
 
 	public MainView() {
-		Log.debug("Starting constructor GUI");
+		Log.info("Starting constructor GUI");
 		frame = new JFrame("Task Manager");
 		panel = new JPanel();
 		JFilterButton = new JButton("Set filter");
@@ -36,30 +34,41 @@ public class MainView implements ActionList, List{
 		JAddButton = new JButton ("Add", new ImageIcon("src/main/resources/img/zakl.png"));
 		JDropButton = new JButton("Delete", new ImageIcon("src/main/resources/img/delete.png"));
 		UpdateButton = new JButton("Update", new ImageIcon("src/main/resources/img/edit.png"));
-		Log.info("Buttons created");
 		onFrameCreate();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.addWindowListener(new WindowListener() {
 			public void windowClosing(WindowEvent event) {
-				Log.info("Window has been closed");}
+				Log.info("Window has been closed");
+			}
+
 			@Override
-			public void windowActivated(WindowEvent arg0) {	}
+			public void windowActivated(WindowEvent arg0) {
+			}
+
 			@Override
-			public void windowClosed(WindowEvent arg0) { }
+			public void windowClosed(WindowEvent arg0) {
+			}
+
 			@Override
-			public void windowDeactivated(WindowEvent arg0) { }
+			public void windowDeactivated(WindowEvent arg0) {
+			}
+
 			@Override
-			public void windowDeiconified(WindowEvent arg0) { }
+			public void windowDeiconified(WindowEvent arg0) {
+			}
+
 			@Override
-			public void windowIconified(WindowEvent arg0) { }
+			public void windowIconified(WindowEvent arg0) {
+			}
+
 			@Override
-			public void windowOpened(WindowEvent arg0) { }
+			public void windowOpened(WindowEvent arg0) {
+			}
 
 		});
 		onButtonAdd();
 		frame.getContentPane();
 		frame.setVisible(true);
-		Log.info("Buttons added on frame");
 	}
 	@Override
 	public void addListener (ActionListener listen) {
@@ -67,15 +76,14 @@ public class MainView implements ActionList, List{
 	}
 	@Override
 	public void onFrameCreate () {
-		Log.debug("Creating Main Frame");
+		Log.info("Creating Main Frame");
 		frame.setSize(420, 330);
 		frame.setLocation(400, 100);
 		frame.setLayout(new BorderLayout());
-		Log.info("Main is created");
 	}
 	@Override
 	public void setTasks(ArrayTaskList tasks) {
-		Log.debug("Adding task into the Main Frame");
+		Log.info("Adding task into the Main Frame");
 		panel.setBorder(BorderFactory.createTitledBorder("Tasks"));
 		panel.setBackground(Color.WHITE);
 		panel.setSize(500, 500);
@@ -93,37 +101,32 @@ public class MainView implements ActionList, List{
 		panel.repaint();
 		panel.validate();
 		frame.getContentPane().add(panel);
-		Log.info("tasks has been added into the Main Frame");
+
 	}
 	@Override
 	public void addButton(JButton button) {
-		Log.debug("Adding buttons into the Main Frame");
+		Log.info("Adding buttons into the Main Frame" + button);
 		frame.add(button);
 	}
 	@Override
 	public void onButtonAdd() {
-		Log.debug("Adding buttons aon the frame and listeners to them");
+		Log.debug("Adding buttons on the frame and listeners to them");
 		JAddButton.setSize(120, 40);
 		JAddButton.setLocation(250, 30);
 		addButton(JAddButton);
-		Log.info("Add button has been added into the Main Frame");
 		JDropButton.setSize(120, 40);
 		JDropButton.setLocation(250, 90);
 		addButton(JDropButton);
-		Log.info("Drop button has been added into the Main Frame");
 		UpdateButton.setSize(120, 40);
 		UpdateButton.setLocation(250, 150);
 		addButton(UpdateButton);
-		Log.info("Update Button has been added into the Main Frame");
 		JFilterButton.setSize(120, 20);
 		JFilterButton.setLocation(250, 210);
 		addButton(JFilterButton);
-		Log.info("Filter button has been added into the Main Frame");
 		JResetButton.setSize(120, 20);
 		JResetButton.setLocation(250, 250);
 		addButton(JResetButton);
 		JAddButton.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent event) {
 				Log.debug("Creating listener for Add button");
 				ActionEvent ev = new ActionEvent(MainView.this, 0, ACTION_ADD);
@@ -172,13 +175,15 @@ public class MainView implements ActionList, List{
 	}
 	@Override
 	public String getSelectedTask() {
-		Log.debug("Select task from list");
+		Log.info("Select task from list");
 		Checkbox box = delivery.getSelectedCheckbox();
 		if (box !=null) {
+			Log.debug("Selected task: ",box.getLabel());
 			return box.getLabel();
 		} else {
 			return null;
 		}
+
 	}
 	@Override
 	public void errorMessage(Object obj) {
