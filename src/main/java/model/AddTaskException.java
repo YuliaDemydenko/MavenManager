@@ -8,5 +8,8 @@ public class AddTaskException extends Exception {
         super(message);
     }
 
+    public AddTaskException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
 

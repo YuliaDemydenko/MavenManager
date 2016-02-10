@@ -2,17 +2,17 @@ package model;
 
 import java.util.*;
 import java.io.*;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
 public abstract class TaskList implements Cloneable, Iterable<Task>, Serializable {
 
-    public abstract void addTask(Task task) throws AddTaskException;
+    public abstract void addTask(TaskInterface task) throws AddTaskException;
     public abstract void removeTask(TaskInterface task) throws RemoveTaskExeption;
     public Task getTask(String title) {
         return null;
     }
-    private static final Logger Log = Logger.getLogger(TaskList.class);
-    public abstract Task getTask(int number) throws GetTaskExeption;
+    private static final Logger Log = LoggerFactory.getLogger(TaskList.class);
+    public abstract TaskInterface getTask(int number) throws GetTaskExeption;
     public abstract int size();
 
     @Override
@@ -45,8 +45,8 @@ public abstract class TaskList implements Cloneable, Iterable<Task>, Serializabl
             cloned = (TaskList) super.clone();
 		}
 		catch (	CloneNotSupportedException  e) {
-            Log.error("CloneNotSupportedException");
-			throw new RuntimeException("CloneNotSupportedException");
+            Log.error("CloneNotSupportedException" + e);
+			throw new RuntimeException("CloneNotSupportedException", e);
 	}
 		return (ArrayTaskList) cloned;
 	}
@@ -83,6 +83,7 @@ public abstract class TaskList implements Cloneable, Iterable<Task>, Serializabl
         }
         catch (RemoveTaskExeption removeTaskExeption) {
             removeTaskExeption.printStackTrace();
+
         }
         catch (IndexOutOfBoundsException e) {
             throw new ConcurrentModificationException();

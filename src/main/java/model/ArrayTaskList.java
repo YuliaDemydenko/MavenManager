@@ -1,22 +1,21 @@
 package model;
 
 import java.util.*;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
-public class ArrayTaskList extends TaskList {
-    public Task[] task_list = new Task[10];
-    private static final Logger Log = Logger.getLogger(ArrayTaskList.class);
+public class ArrayTaskList extends TaskList implements ArrayTaskListInterface {
+    public TaskInterface[] task_list = new Task[10];
+    private static final Logger Log = LoggerFactory.getLogger(ArrayTaskList.class);
     private int size;
 
     @Override
-    public void addTask(Task task) throws AddTaskException {
-        Log.debug("Creating new task");
+    public void addTask(TaskInterface task) throws AddTaskException {
         if (task == null) {
-            Log.error("Task is empty. NullPointerException");
-            throw new AddTaskException("Task is empty!");
+            Log.error("Wasn`t choose task for edit. AddTaskExeption");
+            throw new AddTaskException("Error! Wasn`t choose task for edit!");
         }
         if (size() >= task_list.length) {
-            Task[] buff = new Task[task_list.length*2];
+            TaskInterface[] buff = new Task[task_list.length*2];
             for(int i = 0; i < size(); i++) {
                 buff[i] = this.task_list[i];
             }
@@ -29,14 +28,10 @@ public class ArrayTaskList extends TaskList {
         Log.info("Task has been added into the frame");
     }
     @Override
-    public Task getTask(String title)
-    {   return null;  }
-    @Override
     public void removeTask(TaskInterface task) throws RemoveTaskExeption{
-        Log.debug("Removing task");
 		if (task == null) {
-            Log.error("Task hasn`t been selected.");
-            throw new RemoveTaskExeption("Task hasn`t been selected");
+            Log.error("Task for remove hasn`t been selected. RemoveTaskExeption");
+            throw new RemoveTaskExeption("Error! Task for remove hasn`t been selected");
         }
         int number = 0;
 		for (int i = 0; i < size(); i++) {
@@ -51,19 +46,21 @@ public class ArrayTaskList extends TaskList {
         Log.info("Task has been deleted");
    }
     @Override
-    public Task getTask(int number) throws GetTaskExeption {
-        Log.info("Something happenes");
+    public TaskInterface getTask(int number) throws GetTaskExeption {
         if ( number < 0 || number > size()-1) {
-            Log.error("Something happened. IllegalArgumentException");
+            Log.error("GetTaskExeption. Number of task is nonexist" + number);
             throw new GetTaskExeption("Nonexistent task with number:", number);
         } else {
+            Log.debug("Getting task with number: " + number);
             return task_list[number];
         }
     }
     @Override
     public int size() {
+        Log.debug("Returning size of task array: " + this.size);
         return this.size;
     }
+    @Override
     public TaskList clone() throws CloneNotSupportedException {
         ArrayTaskList cloned = (ArrayTaskList) super.clone();
         cloned.task_list = (Task[]) task_list.clone(); 
@@ -129,16 +126,19 @@ public class ArrayTaskList extends TaskList {
       public void remove() {
           Log.debug("Removing the last element returned by the iterator");
         	if(last <0 )
-          throw new IllegalStateException();
+          throw new EmptyTaskExeption("Such element doesn`t exist", last);
           Log.error("IllegalStateException");
             try {
                 ArrayTaskList.this.removeTask(task_list[last]);
                 cursor = last;
                 last = -1;
-            } catch (RemoveTaskExeption removeTaskExeption) {
+            }
+            catch (RemoveTaskExeption removeTaskExeption) {
                 removeTaskExeption.printStackTrace();
+                Log.debug("RemoveTaskExeption" + removeTaskExeption);
             }
             catch (IndexOutOfBoundsException ex) {
+                Log.debug("IndexOutOfBoundsException" + ex);
                 throw new ConcurrentModificationException();
             }
       }

@@ -1,9 +1,8 @@
 package model;
 
-import java.text.ParseException;
 import java.util.*;
 import java.io.*;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
 public class Task implements TaskInterface, Cloneable, Serializable {
     private String title;
@@ -12,43 +11,46 @@ public class Task implements TaskInterface, Cloneable, Serializable {
     private Date end;
     private long interval;
     private boolean active;
-    private static final Logger Log = Logger.getLogger(Task.class);
+    private static final Logger Log = LoggerFactory.getLogger(Task.class);
 
-    public Task(String title, Date time) {
+    public Task(String title, Date time) throws AddTaskException{
         Log.debug ("Setting title for task");
         if (title == null || time.getTime() < 0) {
-            Log.error("IllegalArgumentException");
-            throw new IllegalArgumentException();
+            Log.error("AddTaskExeption. Task title is empty/Task Time is incorrect" + title + time.getTime());
+            throw new AddTaskException("Task title is empty/Task Time is incorrect" + title + time.getTime());
         }
         this.title = title;
+        Log.debug("Setting new title to the task: " + this.title);
         setTime(time);
         this.active = false;
     }
-    public Task(String title, Date start, Date end, long interval) {
+    public Task(String title, Date start, Date end, long interval) throws AddTaskException{
         Log.debug ("Creating new task");
         if (title == null || start.getTime()< 0 || end.getTime() < 0|| interval < 0) {
-            Log.error("IllegalArgumentException");
-            throw new IllegalArgumentException();
+            Log.error("AddTaskExeption. Task title is empty/Task Time is incorrect" + title + time.getTime());
+            throw new AddTaskException("Task title is empty/Task Time is incorrect" + title + time.getTime());
         } else {
             this.title = title;
-            setTime(start,end,interval);
+            Log.debug("Setting title to the task" + this.title);
+            setTime(start, end, interval);
             this.active = false;
             Log.info("New task created");
         }
     }
     @Override
     public String getTitle() {
+        Log.debug("Returning title of the task" + title);
         return title;
     }
     @Override
-    public void setTitle(String title) {
+    public void setTitle(String title) throws EmptyTaskExeption{
         Log.debug ("Set title for task");
 		if (title ==  null) {
-            Log.error("Title is empty. NullPointerException");
-			throw new NullPointerException();
+            Log.error("Title is empty. EmptyTaskExeption");
+			throw new EmptyTaskExeption("Title is empty!");
 		} else {
 			this.title = title;
-            Log.info("Title for task has been created");
+            Log.debug("Title for task has been created: " + title);
 		}
 	}
     @Override
@@ -60,67 +62,67 @@ public class Task implements TaskInterface, Cloneable, Serializable {
 		this.active = active;
     }
     @Override
-    public void setTime(Date time){
+    public void setTime(Date time) throws EmptyTaskExeption{
         if (time.getTime() < 0) {
-            Log.error("IllegalArgumentException");
-            throw new IllegalArgumentException();
+            Log.error("Incorrect time for task: " + time.getTime());
+            throw new EmptyTaskExeption("Incorrect time for task");
         } else {
             this.time = time;
             this.interval = 0;
-            Log.info("Time for task has been set");
+            Log.debug("Time for task has been set" + time);
         }
     }
     @Override
-    public void setTime(Date start, Date end, long interval){
+    public void setTime(Date start, Date end, long interval) throws EmptyTaskExeption{
         Log.debug ("Set start, end time and interval for task");
         if (start.getTime() < 0 || interval < 0) {
             Log.error("IllegalArgumentException");
-            throw new IllegalArgumentException();
+            throw new EmptyTaskExeption("Incorrect start time/interval for task" + start.getTime() + interval);
         } else {
             this.start = start;
             this.end = end;
             this.interval = interval;
-            Log.debug("Start, end time and interval for task has been set");
+            Log.debug("Start " + start + " end " + end + " time and interval "+ interval + " for task has been set");
         }
     }
     @Override
     public Date getTime() {
-        Log.debug("Get time for task");
+        Log.info("Get time for task");
         if (isRepeated()) {
-            Log.info("Get the same time");
+            Log.debug("Return start time: " + this.start);
             return this.start;
         } else {
-            Log.info("Get new time");
+            Log.debug("Return new time", this.time);
             return this.time;
         }
     }
     @Override
     public Date getStartTime() {
-        Log.debug("Get start time for task");
+        Log.info("Get start time for task");
         if (isRepeated()) {
-            Log.info("Get the same time ");
+            Log.debug("Return start time: " + start);
             return start;
         }
         else {
-            Log.info("Get new time");
+            Log.debug("Return new time", time);
             return time; }
     }
     @Override
     public Date getEndTime(){
-        Log.debug("Get end time for task");
+        Log.info("Get end time for task");
 		if (isRepeated()) {
-            Log.info("Get the same time ");
+            Log.debug("Return end time: " + this.end);
             return this.end;
 		} else {
-            Log.info("Get new time");
+            Log.debug("Return new time", this.time);
 			return this.time;
 		}
     }
     @Override
     public long getRepeatInterval(){
-        Log.debug("Get interval for task");
+        Log.info("Get interval for task");
         if (isRepeated()) {
-            Log.info("Get previous interval, if repeated");
+            Log.debug("Get previous interval, if repeated: " + this.interval);
             return this.interval;
         } else {
             Log.info("Task is not repeated");
@@ -129,8 +131,10 @@ public class Task implements TaskInterface, Cloneable, Serializable {
     }
     @Override
     public boolean isRepeated() {
-        if (interval > 0) return true;
-        else return false;
+        if (interval > 0)
+            return true;
+        else
+            return false;
     }
     @Override
     public String toString() {
@@ -168,7 +172,6 @@ public class Task implements TaskInterface, Cloneable, Serializable {
     }
     @Override
     public boolean equals(Object obj) {
-        Log.debug("Tasks comparing between each other");
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Task task = (Task) obj;

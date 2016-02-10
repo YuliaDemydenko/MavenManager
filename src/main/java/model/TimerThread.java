@@ -2,13 +2,13 @@ package model;
 
 import java.util.Date;
 import java.util.Observable;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
 public class TimerThread extends  Observable {
-	private static final Logger Log = Logger.getLogger(TimerThread.class);
+	private static final Logger Log = LoggerFactory.getLogger(TimerThread.class);
 	private Thread worker;
 	public TimerThread(ManagerModel model ) {
-		Log.debug("Run timer every task from task list");
+		Log.info("Run timer every task from task list");
 		 final ManagerModel mod = model;
 		worker = new Thread(new Runnable() {
 			@Override
@@ -28,7 +28,7 @@ public class TimerThread extends  Observable {
 					}
 					catch (InterruptedException e) {
 						mod.notify("Couldn't stop timer.");
-						Log.error("InterruptedException. Couldn't stop timer.", e);
+						Log.error("InterruptedException. Couldn't stop timer." + e);
 					}
 			}}
 		});

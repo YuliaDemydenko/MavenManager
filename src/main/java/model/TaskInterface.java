@@ -1,11 +1,9 @@
 package model;
 
 import java.util.Date;
-import java.util.Iterator;
 
 public interface TaskInterface {
     public String getTitle();
-    public void setTitle(String title);
     public boolean isActive();
     public void setActive(boolean active);
     public void setTime(Date time);
@@ -20,6 +18,7 @@ public interface TaskInterface {
     public Task clone() throws CloneNotSupportedException;
     public boolean equals(Object obj);
     public int hashCode();
+    public void setTitle(String title) throws EmptyTaskExeption;
 }
 
 

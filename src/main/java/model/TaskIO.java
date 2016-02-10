@@ -4,12 +4,11 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
-import org.apache.log4j.*;
+import org.slf4j.*;
 
 public class TaskIO  {
     public static  SimpleDateFormat dateFormat = new SimpleDateFormat("'['yyyy-MM-dd HH:mm:ss.SSS']'");
-    private static final Logger Log = Logger.getLogger(TaskIO.class);
+    private static final Logger Log = LoggerFactory.getLogger(TaskIO.class);
 
     public static void write(TaskList tasks, OutputStream out) throws IOException {
         DataOutputStream newOut = new DataOutputStream(out);
@@ -54,25 +53,29 @@ public class TaskIO  {
         FileOutputStream newFile = new FileOutputStream(fileName);
         try {
             write(tasks, newFile);
+            Log.info("Writing tasks to file");
         } finally {
             try {
                 newFile.close();
+                Log.info("Closing file");
             } catch (IOException e) {
-                System.out.println("Couldn't close String");
-                Log.error("IOException: Couldn't close String");
+                System.err.println("Couldn't close file" + e);
+                Log.error("IOException: Couldn't close file" + e);
             }
         }
     }
-    public static void readBinary(TaskList tasks, String fileName) throws IOException, AddTaskException {
+    public static void readBinary(TaskList tasks, String fileName) throws AddTaskException, IOException {
         FileInputStream newFile = new FileInputStream(fileName);
         try {
             read(tasks, newFile);
+            Log.info("Reading tasks to file");
         } finally {
             try {
                 newFile.close();
+                Log.info("Closing file");
             } catch (IOException e) {
-                System.out.println("Couldn't close String");
-                Log.error("IOException: Couldn't close String");
+                System.err.println("Couldn't close file" + e);
+                Log.error("IOException: Couldn't close file" + e);
             }
         }
     }
@@ -80,15 +83,18 @@ public class TaskIO  {
         PrintWriter newOut = new PrintWriter(new BufferedWriter(out));
         newOut.println(tasks.size());
         for (Task task : tasks) {
+            Log.info("Getting information about tasks");
             newOut.println(task.getTitle());
             newOut.println(task.getStartTime().getTime());
             newOut.println(task.getTime().getTime());
             newOut.println(task.getRepeatInterval());
             newOut.println(task.isActive());
+            Log.debug("Get task title "+ task.getTitle()+ " start "+task.getStartTime().getTime() + "end time "+ task.getTime().getTime()
+                    +" interval "+task.getRepeatInterval() +" and activity " + task.isActive());
         }
         newOut.flush();
     }
-   public static void read(TaskList tasks, Reader in) throws IOException, AddTaskException {
+   public static void read(TaskList tasks, Reader in) throws AddTaskException, IOException {
         BufferedReader newIn = new BufferedReader(in);
         Task task;
         Integer count = Integer.parseInt(newIn.readLine());
@@ -111,12 +117,12 @@ public class TaskIO  {
     }
     public static void textWriter(TaskList tasks, File fileName) throws IOException {
     	SimpleDateFormat dateFormat = new SimpleDateFormat("'['yyyy-MM-dd HH:mm:ss.SSS']'");
-        Log.info("Choose date format");
+        Log.debug("Choosing date format: " + dateFormat);
     	try(FileWriter out = new FileWriter(fileName)) {
 	    	StringBuffer sb = new StringBuffer();
 	    	int counter=0;
 	    	for (Task t : tasks) {
-                Log.info("Set output format for unrepeated tasks");
+        //        Log.info("Set output format for unrepeated tasks");
 		    	sb.append(t.getTitle());
 			    	for(int i=0;i<sb.length();i++){
 			    	int ii=-1;
@@ -129,7 +135,7 @@ public class TaskIO  {
 		    	out.write(sb.indexOf("\"")==0?String.valueOf(sb):"\""+String.valueOf(sb)+(sb.lastIndexOf("\"")!=sb.length()-1?"\" ":" "));
 		    	sb.delete(0,sb.length());
 		    	if(t.isRepeated()){
-                    Log.info("Set output format for repeated tasks");
+                    Log.info("Setting output format for repeated tasks");
 			    	out.write("from " + dateFormat.format(t.getStartTime()) + " to ");
 			    	out.write(dateFormat.format(t.getEndTime())+" ");
 			    	long second=t.getRepeatInterval()/1000;
@@ -148,7 +154,7 @@ public class TaskIO  {
 	    	}
     	} catch (IOException e){
 	    	e.printStackTrace();
-            Log.error("IOException");
+            Log.error("Can`t get access to file. IOException" + e);
     	}
     }
     	public static void textReader(TaskList tasks, File fileName) throws FileNotFoundException, AddTaskException {
@@ -156,7 +162,7 @@ public class TaskIO  {
 		    	String st;
 		    	while ((st = FileReader.readLine()) != null) {
 			    	System.out.println(st);
-			    	Task task = new Task("t",new Date(455));
+			    	TaskInterface task = new Task("t",new Date(455));
 			    	int index;
 			    	int index2;
 			    	if((index=st.indexOf("\" at ["))>=0) {
@@ -188,14 +194,14 @@ public class TaskIO  {
 						    	String[] arr = st.split(" ");
 						    	long time=0;
 						    	for (int i=0;i<arr.length-1;i++){
-                                    Log.debug("Set Time values");
+                                    Log.info("Set Time values");
 							    	if(arr[i+1].equals("seconds")) time+=Long.valueOf(arr[i])*1000;
 							    	else
-							    		if(arr[i+1].equals("minutes")) time+=Long.valueOf(arr[i])*60*1000;
-							    		else
-							    			if(arr[i+1].equals("hours")) time+=Long.valueOf(arr[i])*60*60*1000;
-							    			else
-							    				if(arr[i+1].equals("days")) time+=Long.valueOf(arr[i])*24*60*60*1000;
+                                    if(arr[i+1].equals("minutes")) time+=Long.valueOf(arr[i])*60*1000;
+							    	else
+							    	if(arr[i+1].equals("hours")) time+=Long.valueOf(arr[i])*60*60*1000;
+							   		else
+							   		if(arr[i+1].equals("days")) time+=Long.valueOf(arr[i])*24*60*60*1000;
 						    	}
                                 task.setTime( (dateFormat.parse(date)),dateFormat.parse(dateTo),time);
 
@@ -205,13 +211,15 @@ public class TaskIO  {
 	    	}
             catch (IOException e) {
                 e.printStackTrace();
+                Log.error("Can`t get access to file. IOExeption" + e);
             } catch (ParseException e) {
                 e.printStackTrace();
+                Log.error("Can`t read to file. ParseException" + e);
             }
         }
 
     public static void writeText(TaskList tasks, String fileName)  throws IOException {
-        Log.debug("Writing tasks into a file");
+        Log.info("Writing tasks into a file");
         OutputStream newfileName = new FileOutputStream(fileName);
         DataOutputStream newFile = new DataOutputStream(newfileName);
         newFile.writeInt(tasks.size());
@@ -221,10 +229,12 @@ public class TaskIO  {
             newFile.writeLong(task.getEndTime().getTime());
             newFile.writeLong(task.getRepeatInterval());
             newFile.writeBoolean(task.isActive());
+            Log.debug("Get task title "+ task.getTitle()+ " start "+task.getStartTime().getTime() + "end time "+ task.getTime().getTime()
+                    +" interval "+task.getRepeatInterval() +" and activity " + task.isActive());
         }
     }
     public static void readText(TaskList tasks, String fileName) throws IOException, AddTaskException {
-        Log.debug("Reading tasks from  file");
+        Log.info("Reading tasks from  file");
         InputStream newfileName = new FileInputStream(fileName);
         DataInputStream newFile = new DataInputStream(newfileName);
         int count = newFile.readInt();
@@ -234,9 +244,10 @@ public class TaskIO  {
             long end = newFile.readLong();
             long repeat = newFile.readLong();
             boolean active = newFile.readBoolean();
-            Task task = new Task(title, new Date(start), new Date(end), repeat);
+            TaskInterface task = new Task(title, new Date(start), new Date(end), repeat);
             task.setActive(active);
                 tasks.addTask(task);
+            Log.debug("Get task title " + title + " start " + start + "end time " + end + " interval " + repeat + " and activity " + active);
         }
     }
 

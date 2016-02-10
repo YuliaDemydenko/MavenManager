@@ -5,15 +5,20 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.*;
 
-import org.apache.log4j.*;
+import org.slf4j.*;
 
 public class ManagerModel  extends  Observable implements ManagerInterface, view.ActionList{
 
 	private ArrayTaskList taskList = new ArrayTaskList();
 	private File file = new File(FILE_PATH, FILE_NAME);
-		private static final Logger Log = Logger.getLogger(ManagerModel.class);
+		private static final Logger Log = LoggerFactory.getLogger(ManagerModel.class);
 
-	public ManagerModel() {
+	public ManagerModel(ArrayTaskList taskList, File file) {
+		this.taskList = taskList;
+		this.file = file;
+	}
+
+	public ManagerModel() throws AddTaskException {
 		readTaskList(taskList);
 		new TimerThread(this);
 	}
@@ -22,30 +27,34 @@ public class ManagerModel  extends  Observable implements ManagerInterface, view
 		Log.debug("Setting changes to Observer");
 		setChanged();
 		notifyObservers(obj);
-		Log.debug("Notifying Observer about changes");
 	}
 	@Override
-	public void addTask(Task task) throws AddTaskException{
-		Log.debug("Adding new task into task list");
+	public void addTask(TaskInterface task) throws AddTaskException{
 		for (Task checkTask : taskList) {
 			Log.debug("Adding new task into task list");
 			if (checkTask.getTitle().equals(task.getTitle())) {
-				Log.debug("Comparing task's titles ");
+				Log.debug("Comparing task's titles " + checkTask.getTitle() + task.getTitle());
 				try {
+					Log.debug("Deleting existing task" + checkTask.getTitle());
 					removeTask(checkTask);
 				} catch (RemoveTaskExeption removeTaskExeption) {
+					Log.debug("Error! RemoveTaskExeption: " + removeTaskExeption);
 					System.err.print("Error: " + removeTaskExeption);
 				}
 			}
 		}
 		try {
+			Log.debug("Adding task: " + task.getTitle());
 			taskList.addTask(task);
 		} catch (AddTaskException e) {
+			Log.debug("Cann`t add task: " + task.getTitle());
 			System.err.print("Error: " + e);
 		}
 		try {
-			textWriter(taskList,file);
+			Log.debug("Writing task to task list and file" + task.getTitle() + file);
+			textWriter(taskList, file);
 		} catch (IOException e) {
+			Log.error("Can`t write to file. IOExeption" + e);
 			e.printStackTrace();
 		}
 		notify(UPDATE);
@@ -53,17 +62,15 @@ public class ManagerModel  extends  Observable implements ManagerInterface, view
 	}
 	@Override
 	public ArrayTaskList getTaskList() {
-		Log.debug("Returning the existing task list");
+		Log.debug("Returning the existing task list: " + this.taskList);
 		return this.taskList;
 	}
-	public void textReader(TaskList tasks, File fileName) throws IOException, ParseException {
-		Log.debug("Reading tasks from file");
+	public void textReader(TaskList tasks, File fileName) throws IOException, ParseException, AddTaskException {
 		Log.debug("Adding tasks into the frame");
 			TaskIO.textReader(tasks, fileName);
 
 	}
 	public void textWriter(TaskList tasks, File fileName) throws IOException {
-		Log.debug("Reading tasks from the frame");
 		Log.debug("Adding tasks into the file");
 		TaskIO.textWriter(tasks, fileName);
 	}
@@ -73,33 +80,36 @@ public class ManagerModel  extends  Observable implements ManagerInterface, view
 		for (Task tas : taskList) {
 			if (tas.getTitle().equals(task.getTitle())) {
 				taskList.removeTask(task);
+				Log.debug("Deleting task: " + task.getTitle());
 			}
 		}
 		try {
 			textWriter(taskList, file);
 		} catch (IOException e) {
+			Log.error ("Can`t write task to file. IOExeption" + e);
 			e.printStackTrace();
 		}
 		notify(REMOVE);
 	}
 	@Override
-	public Task getTask(String title) {
-		Log.debug("Selecting task from the list");
+	public Task getTask(String title) throws TaskNotFoundExeption {
 		for (Task task : taskList) {
+			Log.debug("Selecting task from the list: " + task.getTitle());
 			if(task.getTitle().equals(title))
 				return task;
 		}
-		return null;
+
+		throw new TaskNotFoundExeption("Error: Task was not found!");
 	}
 	@Override
-	public void readTaskList(ArrayTaskList tasks) {
+	public void readTaskList(ArrayTaskList tasks) throws AddTaskException {
 		try {
-			Log.debug("Reading tasks from the frame");
 			textReader(tasks,file);
 		} catch (IOException e) {
-			Log.error("IOException e", e);
+			Log.error("Can`t read task from the frame. IOException e", e);
 			taskList = new ArrayTaskList() ;
 		} catch (ParseException e) {
+			Log.error("ParseException e", e);
 			e.printStackTrace();
 		}
 	}
